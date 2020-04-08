@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5db77d51c5.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>Dūzgės sodyba</title>
+</head>
+<body>
+    <header class="header-wrapper relative">
+        <div class="top-wrapper flex">
+            <div class="logo-div flex-center">
+                <a href="#"><img src="images/logo.png" width="70px" alt="Duzges sodyba - pokylių salės nuoma Mažeikių rajone"></a>
+            </div>
+            <nav class="nav relative">
+                <ul class="list-items flex">
+                    <li><a href="#"><b>Apie mus</b></a></li>
+                    <li><a href="paslaugos/index.html"><b>Paslaugos</b></a></li>
+                    <li><a href="kontaktai/index.html"><b>Kontaktai</b></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="title-wrapper flex-center relative">
+            <div class="title">
+                <h1>Dūzgės sodyba</h1>  
+                <p>Pokylių salės nuoma vestuvėms, krikštynoms, jubiliejams ir šeimos susitikimams</p>
+            </div>
+            <div class="header-btns-wrapper flex absolute">
+                <div class="btn primary-btn">
+                    <a href="paslaugos/index.html">Paslaugos</a>
+                </div>
+                <div class="btn alternative-btn">
+                    <a href="kontaktai/index.html">Kontaktai</a>
+                </div>
+            </div>
+        </div>
+        <div class="burger-wrapper absolute">
+            <div class="burger-item"></div>
+            <div class="burger-item"></div>
+            <div class="burger-item"></div>
+        </div>
+        <div class="mobile-nav-wrapper absolute">
+            <ul class="mobile-nav-ul">
+                <li><i class="fas fa-home"></i><a href="#">Pagrindinis</a></li>
+                <li><i class="fas fa-info-circle"></i><a href="paslaugos/index.html">Paslaugos</a></li>
+                <li><i class="fas fa-street-view"></i><a href="kontaktai/index.html">Kontaktai</a></li>
+            </ul>
+            <h3 class="mobile-nav-heading text-align-center main-color">Dūzgės sodyba</h3>
+        </div>
+    </header>
+    <main>
+        <article class="us-introduction-wrapper">
+            <h2>Apie mus</h2>
+            <div class="us-introduction-paragraph">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quaerat. Eos neque animi dolorem quos magnam veritatis voluptatum officiis perferendis!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?</p>
+            </div>
+            <div class="us-introduction-images">
+                <div><i class="fas fa-tree"></i></div>
+                <div><i class="fas fa-moon"></i></div>
+                <div></div>
+            </div>
+        </article>
+        <article id="about-wrapper" class="about-wrapper flex-center">
+            <div class="services-wrapper flex">
+                <div class="banquet-wrapper relative">
+                    <h2 class="main-color">Pokylių salės</h2>
+                    <div class="banquet-img hover-effect"></div>
+                    <div class="service-desc">
+                        <p>Mūsų sodyboje įrengtos 2 salės, puikiai tinkančios tiek kuklioms, tiek ir iškilmingoms šventėms. 
+                            Didžiojoje salėje telpa iki 60 žmonių, mažojoje - apie 30.</p>
+                    </div>
+                    <a class="read-more btn primary-btn" href="/paslaugos/index.html#main-banquet">Skaityti daugiau</a>
+                </div>
+                <div class="food-wrapper relative">
+                    <h2 class="main-color">Maisto ruošimas</h2>
+                    <div class="food-img hover-effect"></div>
+                    <div class="service-desc">
+                        <p>Sodybos virtuvėje naudojame pramonines virykles bei orkaites, todėl maistą ruošiame patys ir galime 
+                            užtikrinti jo šviežumą ir skonį. Sodyboje ruošiami karštieji patiekalai bei užkandžiai alaus stalui</p>
+                    </div>
+                    <a class="read-more btn primary-btn" href="/paslaugos/index.html#food">Skaityti daugiau</a>
+                </div>
+                <div class="accommodation-wrapper relative">
+                    <h2 class="main-color">Apyvendinimas</h2>
+                    <div class="accommodation-img hover-effect"></div>
+                    <div class="service-desc">
+                        <p>Sodyboje įrengti dviviečiai, triviečiai ir keturviečiai kambariai bei bendro naudojimo dušai. 
+                            Vasaros metu patogiai galime apgyvendinti apie 60 žmonių. Žiemos metu apie 50.</p>
+                    </div>
+                    <a class="read-more btn primary-btn" href="/paslaugos/index.html#accommodation">Skaityti daugiau</a>
+                </div>
+                <div class="bathtube-wrapper relative">
+                    <h2 class="main-color">Kubilas</h2>
+                    <div class="bathtube-img hover-effect"></div>
+                    <div class="service-desc">
+                        <p>Sodyboje neseniai pakeistas kubilas, kuriame vienu metu gali maudytis iki 12 asmenų.</p>
+                    </div>
+                    <a class="read-more btn primary-btn" href="/paslaugos/index.html#accommodation">Skaityti daugiau</a>
+                </div>
+            </div>
+        </article>
+        <div id ="gallery" class="gallery-wrapper">
+            <h2 class="main-color">Nuotraukų galerija</h2>
+            <div class="flex photo-gallery">
+                <div class="sample-wrapper flex">
+                    <div class="sample sample1">
+                        <img class="myImg" src="images/veliavos-duzges-sodyba.jpg" alt="Dūzgės sodyboje nuolat plevena Mūsų visų vėliavos" width="200px">
+                    </div>
+                    <div class="sample sample2">
+                        <img class="myImg" src="images/fasadas-duzges-sodyba.jpg" alt="Dūzgės sodyba. Fasadas iš didžiosios salės" width="200px">
+                    </div>
+                    <div class="sample sample3">
+                        <img class="myImg" src="images/sales-nuoma-mazeikiu-rajone.jpg" alt="Apvalus stalas Dūzgės sodyboje" width="200px">
+                    </div>
+                    <div class="sample sample4">
+                        <img class="myImg" src="images/pokyliu-saliu-nuoma-duzges-sodyba.jpg" alt="Dūzgės sodyba. Didysis stalas dižiojoje salėje" width="200px">
+                    </div>
+                    <div class="sample sample5">
+                        <img class="myImg" src="images/pokyliu-sales-nuoma-mazeikiuose.jpg" alt="Apvalus stalas Dūzgės sodyboje" width="200px">
+                    </div>
+                    <div class="sample sample6">
+                        <img class="myImg" src="images/pokyliu-sale.jpg" alt="Didžioji salė Dūzgės sodyboje" width="200px">
+                    </div>
+                    <div class="sample sample7">
+                        <img class="myImg" src="images/uzkandziai-duzges-sodyba.jpg" alt="Šaltieji patiekalai Dūzgės sodyboje" width="200px">
+                    </div>
+                    <div class="sample sample8">
+                        <img class="myImg" src="images/salti-patiekalai-duzges-sodyba.jpg" alt="Šaltieji patiekalai Dūzgės sodyboje" width="200px">
+                    </div>
+                    <div class="sample sample9">
+                        <img class="myImg" src="images/maistas-duzges-sodyba-mazeikiu-rajonas.jpg" alt="Šaltieji patiekalai Dūzgės sodyboje" width="200px">
+                    </div>
+                    <div class="sample sample9">
+                        <img class="myImg" src="images/alaus-stalas-duzges-sodyba.jpg" alt="Šaltieji patiekalai Dūzgės sodyboje" width="200px">
+                    </div>
+                    <div class="sample sample9">
+                        <img class="myImg" src="images/patriotizmas-duzges-sodyba.jpg" alt="Ypatingos šventės minėjimas Dūzgės sodyboje" width="200px">
+                    </div>
+                    <div class="sample sample9">
+                        <img class="myImg" src="images/maisto-ruosimas-duzges-sodyboje.jpg" alt="Vieno kąsnio užkandėliai Dūzgės sodyboje" width="200px">
+                    </div>
+                </div>
+                <div class="sample-showcase relative">
+                    <div class="sample-showcase-img flex">
+                        <img id="modal-img" width="700px">
+                        <p id="sample-showcase-alt" class="main-color"></p>
+                    </div>
+                    <a class="prev absolute">&#10094;</a>
+                    <a class="next absolute">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer flex relative">
+        <div class="mini-nav-wrapper footer-section">
+            <h2 class="main-color">Praleidote?</h2>
+            <div class="mini-nav-ul">
+                <ul class="mini-nav flex">
+                    <li><a href="#about-wrapper">Apie mus</a></li>
+                    <li><a href="paslaugos/index.html#main-banquet">Pokylių salės</a></li>
+                    <li><a href="paslaugos/index.html#accommodation">Apgyvendinimas</a></li>
+                    <li><a href="paslaugos/index.html#food">Maisto gaminimas</a></li>
+                    <li><a href="kontaktai/index.html">Kontaktai</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-links footer-section">
+            <h2 class="main-color">Sekite mus:</h2>
+            <div class="social-icons-wrapper">
+                <a href="https://www.facebook.com/duzgessodyba/" target="_blank"><i class="fab fabfb fa-facebook fa-3x relative"></i></a>
+                <a href="https://www.youtube.com/watch?v=t3qPvvBOlvQ" target="_blank"><i class="fab fabyt fa-youtube fa-3x relative"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h2 class="form-h2">Paklauskite</h2>
+            <div class="footer-form-wrapper flex">
+                <form >
+                    <div class="name form-element">
+                        <div class="label"><label><span>Jūsų vardas:</span></label></div>
+                        <input class="form-input" type="text" name="first-name" placeholder="vardas" required>
+                    </div>
+                    <div class="surname form-element">
+                        <div class="label"><label><span>Jūsų el.paštas:</span></label></div>
+                        <input class="form-input" type="email" name="email" placeholder="jonas@gmail.com" required>
+                    </div>
+                    <div class="question form-element">
+                        <div class="label"><label><span>Jūsų klausimas:</span></label></div>
+                        <textarea class="form-input" cols="20" rows="10" name="question" placeholder="Sveiki, norėčiau paklausti..." required></textarea>
+                    </div>
+                    <div class="send">
+                        <input type="submit" value="Siųsti">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="copy main-color absolute">&copy Dūzgės sodyba, 2020</div>
+    </footer>
+</body>
+</html>
