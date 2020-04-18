@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5db77d51c5.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/paslaugos.js"></script>
+    <script src="../js/paslaugos.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/email.js"></script>
     <title>Dūzgės sodyba</title>
 </head>
 <body>
@@ -42,7 +44,7 @@
         <div class="services-introduction-wrapper relative">
             <div class="services-bg"></div>
             <div class="services-heading-wrapper absolute">
-                <h2>Paslaugos</h2>
+                <h2 class="heading-bottom-border">Paslaugos</h2>
                 <p>Šiame puslapyje rasite Dūzgės sodyboje teikiamas paslaugas</p>
             </div>
             <div class="service-item-wrapper absolute">
@@ -64,10 +66,22 @@
             <span class="tablink">Maisto ruošimas</span>
             <span class="tablink">Kubilas</span>
          </div>
-        <article class="services-banquet-wrapper">
+        <article class="services-banquet-wrapper relative">
+            <div id="service-button" class="absolute service-button">
+                <div class="service-line"></div>
+                <div class="service-line"></div>
+                <div class="service-line"></div>
+            </div>
+            <div class="mobile-tablink-wrapper absolute">
+                <span class="mobile-tablink">Didžioji pokylių salė</span>
+                <span class="mobile-tablink">Mažoji pokylių salė</span>
+                <span class="mobile-tablink">Apgyvendinimas</span>
+                <span class="mobile-tablink">Maisto ruošimas</span>
+                <span class="mobile-tablink">Kubilas</span>
+             </div>
             <div class="main-banquet flex" id="big-banquet-section">
                 <div class="main-banquet-description">
-                    <h2>Didžioji pokylių salė</h2>
+                    <h2 class="heading-bottom-border">Didžioji pokylių salė</h2>
                     <p>Didžiojoje pokylių salėje telpa iki 60 žmonių, o banketų metu galime priimti ir 100. Su didžiąją sale yra sujungta mažoji salė, 
                         kuri skirta saldžiam stalui ir kitų užkandžių pateikimui. Salėje yra pakankamai vietos muzikantų įrangai ir šokiams. 
                         Pro didžiosios salės langus atsiveria puikus vaizdas į upę. Abejose salėse yra židiniai bei įrengtas grindinis šildymas.</p>
@@ -78,7 +92,7 @@
             </div>
             <div class="main-banquet flex">
                 <div class="main-banquet-description">
-                    <h2>Mažoji pokylių salė</h2>
+                    <h2 class="heading-bottom-border">Mažoji pokylių salė</h2>
                     <p>Mažoji pokylių salė talpina iki 30 žmonių. Ji pritaikyta ne tik šventei, bet ir seminarų ar mokymų organizavimui. 
                         Iš mažosios pokylių salės yra išėjimas į lauko terasą.</p>
                 </div>
@@ -88,7 +102,7 @@
             </div>
             <div class="main-banquet flex">
                 <div class="main-banquet-description">
-                    <h2>Apgyvendinimas</h2>
+                    <h2 class="heading-bottom-border">Apgyvendinimas</h2>
                     <p>Apgyvendinimas Dūzgės sodyboje labai jaukus ir malonus. Antrajame pastato aukšte yra įrengti dviviečiai, triviečiai ir daugiaviečiai kambariai, 
                         pro kurių langus atsiveria vaizdas į medžiais apsuptą Varduvos upę. Kambarėliai vienas nuo kito nedaug skiriasi savo dydžiu bei įrengimu. 
                         Tualetai ir dušai yra bendro naudojimo, o pirmajame pastato aukšte yra ir virtuvėlė, kur Jūs patogiai galėsite ruošti maistą. 
@@ -100,7 +114,7 @@
             </div>
             <div class="main-banquet flex">
                 <div class="main-banquet-description">
-                    <h2>Maisto ruošimas</h2>
+                    <h2 class="heading-bottom-border">Maisto ruošimas</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim doloremque nihil perspiciatis 
                         et dolores cupiditate natus exercitationem sint odio unde tempore molestiae repudiandae veniam, porro velit. Eos quo velit quae!
                     </p>
@@ -111,7 +125,7 @@
             </div>
             <div class="main-banquet flex">
                 <div class="main-banquet-description">
-                    <h2>Kubilo nuoma</h2>
+                    <h2 class="heading-bottom-border">Kubilo nuoma</h2>
                     <p>Sodyboje neseniai pakeistas kubilas, kuriame vienu metu gali maudytis iki 12 asmenų.</p>
                 </div>
                 <div class="main-banquet-img flex-center">
@@ -120,49 +134,47 @@
             </div>
         </article>
     </main>
-    <footer class="footer flex relative">
-        <div class="mini-nav-wrapper footer-section">
-            <h2 class="main-color">Praleidote?</h2>
-            <div class="mini-nav-ul">
-                <ul class="mini-nav flex">
-                    <li><a href="../index.html#about-wrapper">Apie mus</a></li>
-                    <li><a href="paslaugos/index.html#main-banquet">Pokylių salės</a></li>
-                    <li><a href="paslaugos/index.html#accommodation">Apgyvendinimas</a></li>
-                    <li><a href="paslaugos/index.html#food">Maisto gaminimas</a></li>
-                    <li><a href="../kontaktai/index.html">Kontaktai</a></li>
+    <footer id="footer" class="footer relative">
+        <div class="footer-container flex">
+            <div class="footer-nav footer-section">
+                <h3>Siūlome paskaityti:</h3>
+                <ul>
+                    <li><a href="">Apie mus</a></li>
+                    <li><a href="">Paslaugos</a></li>
+                    <li><a href="">Kontaktai</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="social-links footer-section">
-            <h2 class="main-color">Sekite mus:</h2>
-            <div class="social-icons-wrapper">
-                <a href="https://www.facebook.com/duzgessodyba/" target="_blank"><i class="fab fabfb fa-facebook fa-3x relative"></i></a>
-                <a href="https://www.youtube.com/watch?v=t3qPvvBOlvQ" target="_blank"><i class="fab fabyt fa-youtube fa-3x relative"></i></a>
+            <div class="footer-services footer-section">
+                <h3>Greitoji navigacija</h3>
+                <ul>
+                    <li><a href="">Didžioji salė</a></li>
+                    <li><a href="">Mažoji salė</a></li>
+                    <li><a href="">Apgyvendinimas</a></li>
+                    <li><a href="">Maisto ruošimas</a></li>
+                    <li><a href="">Kubilo nuoma</a></li>
+                </ul>
+            </div>
+            <div class="footer-working-hours footer-section">
+                <h3>Sodybą apžiūrėti galite:</h3>
+                <ul>
+                    <li><span class="footer-info-text">I - VII: 8:00 - 21:00 val.</span></li>
+                    <li>Maloniai prašome prieš atvykstant<br>pranešti nurodytais kontaktais <i class="far fa-arrow-alt-circle-right"></i></li>
+                </ul>
+            </div>
+            <div class="footer-contacts footer-section">
+                <h3>Kontaktai:</h3>
+                <ul>
+                    <li><span class="footer-info-text"><a class="email-link" href=""></a></span></li>
+                    <li><span class="footer-info-text"><a href="tel:+37068770662">+37068770662</a></span> Jolanta</li>
+                    <li><span class="footer-info-text"><a href="tel:+37067788325">+37067788325</a></span> Andrius</li>
+                </ul>
+                <h3>Soc.tinklai:</h3>
+                <a class="footer-info-text" href="https://www.facebook.com/duzgessodyba/" target="_blank"><span><i class="fab fa-facebook"></i></span></a>
             </div>
         </div>
-        <div class="footer-section">
-            <h2 class="form-h2">Paklauskite</h2>
-            <div class="footer-form-wrapper flex">
-                <form >
-                    <div class="name form-element">
-                        <div class="label"><label><span>Jūsų vardas:</span></label></div>
-                        <input class="form-input" type="text" name="first-name" placeholder="vardas" required>
-                    </div>
-                    <div class="surname form-element">
-                        <div class="label"><label><span>Jūsų el.paštas:</span></label></div>
-                        <input class="form-input" type="email" name="email" placeholder="jonas@gmail.com" required>
-                    </div>
-                    <div class="question form-element">
-                        <div class="label"><label><span>Jūsų klausimas:</span></label></div>
-                        <textarea class="form-input" cols="20" rows="5" name="question" placeholder="Sveiki, norėčiau paklausti..." required></textarea>
-                    </div>
-                    <div class="send">
-                        <input type="submit" value="Siųsti">
-                    </div>
-                </form>
-            </div>
+        <div class="copyrights">
+            <p>Dūzgės sodyba, 2020</p>
         </div>
-        <div class="copy main-color absolute">&copy Dūzgės sodyba, 2020</div>
     </footer>
 </body>
 </html>

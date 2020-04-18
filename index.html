@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/5db77d51c5.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/email.js"></script>
     <title>Dūzgės sodyba</title>
 </head>
 <body>
@@ -54,21 +56,20 @@
     </header>
     <main>
         <article class="us-introduction-wrapper">
-            <h2>Apie mus</h2>
-            <div class="us-introduction-paragraph">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quaerat. Eos neque animi dolorem quos magnam veritatis voluptatum officiis perferendis!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?</p>
-            </div>
-            <div class="us-introduction-images">
-                <div><i class="fas fa-tree"></i></div>
-                <div><i class="fas fa-moon"></i></div>
-                <div></div>
-            </div>
+            <div class="us-img fl-left"></div>
+            <h3 class="main-color">Apie mūsų sodybą</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quaerat. Eos neque animi dolorem quos magnam veritatis voluptatum officiis perferendis!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
+            </p>
         </article>
         <article id="about-wrapper" class="about-wrapper flex-center">
             <div class="services-wrapper flex">
                 <div class="banquet-wrapper relative">
-                    <h2 class="main-color">Pokylių salės</h2>
+                    <h2 class="main-color heading-bottom-border">Pokylių salės</h2>
                     <div class="banquet-img hover-effect"></div>
                     <div class="service-desc">
                         <p>Mūsų sodyboje įrengtos 2 salės, puikiai tinkančios tiek kuklioms, tiek ir iškilmingoms šventėms. 
@@ -77,7 +78,7 @@
                     <a class="read-more btn primary-btn" href="/paslaugos/index.html#main-banquet">Skaityti daugiau</a>
                 </div>
                 <div class="food-wrapper relative">
-                    <h2 class="main-color">Maisto ruošimas</h2>
+                    <h2 class="main-color heading-bottom-border">Maisto ruošimas</h2>
                     <div class="food-img hover-effect"></div>
                     <div class="service-desc">
                         <p>Sodybos virtuvėje naudojame pramonines virykles bei orkaites, todėl maistą ruošiame patys ir galime 
@@ -86,7 +87,7 @@
                     <a class="read-more btn primary-btn" href="/paslaugos/index.html#food">Skaityti daugiau</a>
                 </div>
                 <div class="accommodation-wrapper relative">
-                    <h2 class="main-color">Apyvendinimas</h2>
+                    <h2 class="main-color heading-bottom-border">Apyvendinimas</h2>
                     <div class="accommodation-img hover-effect"></div>
                     <div class="service-desc">
                         <p>Sodyboje įrengti dviviečiai, triviečiai ir keturviečiai kambariai bei bendro naudojimo dušai. 
@@ -95,7 +96,7 @@
                     <a class="read-more btn primary-btn" href="/paslaugos/index.html#accommodation">Skaityti daugiau</a>
                 </div>
                 <div class="bathtube-wrapper relative">
-                    <h2 class="main-color">Kubilas</h2>
+                    <h2 class="main-color heading-bottom-border">Kubilas</h2>
                     <div class="bathtube-img hover-effect"></div>
                     <div class="service-desc">
                         <p>Sodyboje neseniai pakeistas kubilas, kuriame vienu metu gali maudytis iki 12 asmenų.</p>
@@ -105,7 +106,7 @@
             </div>
         </article>
         <div id ="gallery" class="gallery-wrapper">
-            <h2 class="main-color">Nuotraukų galerija</h2>
+            <h2 class="main-color heading-bottom-border">Nuotraukų galerija</h2>
             <div class="flex photo-gallery">
                 <div class="sample-wrapper flex">
                     <div class="sample sample1">
@@ -156,49 +157,47 @@
             </div>
         </div>
     </main>
-    <footer class="footer flex relative">
-        <div class="mini-nav-wrapper footer-section">
-            <h2 class="main-color">Praleidote?</h2>
-            <div class="mini-nav-ul">
-                <ul class="mini-nav flex">
-                    <li><a href="#about-wrapper">Apie mus</a></li>
-                    <li><a href="paslaugos/index.html#main-banquet">Pokylių salės</a></li>
-                    <li><a href="paslaugos/index.html#accommodation">Apgyvendinimas</a></li>
-                    <li><a href="paslaugos/index.html#food">Maisto gaminimas</a></li>
-                    <li><a href="kontaktai/index.html">Kontaktai</a></li>
+    <footer id="footer" class="footer relative">
+        <div class="footer-container flex">
+            <div class="footer-nav footer-section">
+                <h3>Siūlome paskaityti:</h3>
+                <ul>
+                    <li><a href="">Apie mus</a></li>
+                    <li><a href="">Paslaugos</a></li>
+                    <li><a href="">Kontaktai</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="social-links footer-section">
-            <h2 class="main-color">Sekite mus:</h2>
-            <div class="social-icons-wrapper">
-                <a href="https://www.facebook.com/duzgessodyba/" target="_blank"><i class="fab fabfb fa-facebook fa-3x relative"></i></a>
-                <a href="https://www.youtube.com/watch?v=t3qPvvBOlvQ" target="_blank"><i class="fab fabyt fa-youtube fa-3x relative"></i></a>
+            <div class="footer-services footer-section">
+                <h3>Greitoji navigacija</h3>
+                <ul>
+                    <li><a href="">Didžioji salė</a></li>
+                    <li><a href="">Mažoji salė</a></li>
+                    <li><a href="">Apgyvendinimas</a></li>
+                    <li><a href="">Maisto ruošimas</a></li>
+                    <li><a href="">Kubilo nuoma</a></li>
+                </ul>
+            </div>
+            <div class="footer-working-hours footer-section">
+                <h3>Sodybą apžiūrėti galite:</h3>
+                <ul>
+                    <li><span class="footer-info-text">I - VII: 8:00 - 21:00 val.</span></li>
+                    <li>Maloniai prašome prieš atvykstant<br>pranešti nurodytais kontaktais <i class="far fa-arrow-alt-circle-right"></i></li>
+                </ul>
+            </div>
+            <div class="footer-contacts footer-section">
+                <h3>Kontaktai:</h3>
+                <ul>
+                    <li><span class="footer-info-text"><a class="email-link" href=""></a></span></li>
+                    <li><span class="footer-info-text"><a href="tel:+37068770662">+37068770662</a></span> Jolanta</li>
+                    <li><span class="footer-info-text"><a href="tel:+37067788325">+37067788325</a></span> Andrius</li>
+                </ul>
+                <h3>Soc.tinklai:</h3>
+                <a class="footer-info-text" href="https://www.facebook.com/duzgessodyba/" target="_blank"><span><i class="fab fa-facebook"></i></span></a>
             </div>
         </div>
-        <div class="footer-section">
-            <h2 class="form-h2">Paklauskite</h2>
-            <div class="footer-form-wrapper flex">
-                <form >
-                    <div class="name form-element">
-                        <div class="label"><label><span>Jūsų vardas:</span></label></div>
-                        <input class="form-input" type="text" name="first-name" placeholder="vardas" required>
-                    </div>
-                    <div class="surname form-element">
-                        <div class="label"><label><span>Jūsų el.paštas:</span></label></div>
-                        <input class="form-input" type="email" name="email" placeholder="jonas@gmail.com" required>
-                    </div>
-                    <div class="question form-element">
-                        <div class="label"><label><span>Jūsų klausimas:</span></label></div>
-                        <textarea class="form-input" cols="20" rows="10" name="question" placeholder="Sveiki, norėčiau paklausti..." required></textarea>
-                    </div>
-                    <div class="send">
-                        <input type="submit" value="Siųsti">
-                    </div>
-                </form>
-            </div>
+        <div class="copyrights">
+            <p>Dūzgės sodyba, 2020</p>
         </div>
-        <div class="copy main-color absolute">&copy Dūzgės sodyba, 2020</div>
     </footer>
 </body>
 </html>
