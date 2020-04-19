@@ -24,8 +24,14 @@ $(document).ready(function(){
     var mobileTablinkWrapper = document.getElementsByClassName('mobile-tablink-wrapper');
     var mobileTabLink = document.getElementsByClassName('mobile-tablink');
 
+    function toggleTablinks() {
+        for (i=0; i<mobileTabLink.length; i++){
+            mobileTabLink[i].classList.toggle('mobile-tablink-active')
+        }  
+    }
     mobileServiceButton.addEventListener('click', function(){
-        mobileTablinkWrapper[0].classList.toggle('mobile-tablink-wrapper-active');   
+        mobileTablinkWrapper[0].classList.toggle('mobile-tablink-wrapper-active'); 
+        toggleTablinks()
     });
 
     for (i=0; i<mobileTabLink.length; i++) {
@@ -33,7 +39,8 @@ $(document).ready(function(){
         mobileTabLink[i].addEventListener('click', function(){
             hideServiceSection();
             serviceSection[mobileIndex].style.display = "flex";
-            mobileTablinkWrapper[0].classList.toggle('mobile-tablink-wrapper-active');   
+            mobileTablinkWrapper[0].classList.toggle('mobile-tablink-wrapper-active'); 
+            toggleTablinks();  
         })
     }
 });

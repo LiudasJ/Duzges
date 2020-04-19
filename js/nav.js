@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     function showMobileNavContent () {
         mobileNavUl[0].classList.toggle('isVisible');
-        mobileNavHeading[0].classList.toggle('isVisible');
+        mobileNavHeading[0].classList.toggle('isVisibleNavHeading');
     }
 
     function changeBurgerColor () {
@@ -19,7 +19,7 @@ $(document).ready(function(){
     navButton[0].addEventListener('click', function() {
         mobileNavBox[0].classList.toggle('isActiveMobileNav');
 
-        if (mobileNavUl[0].classList.contains("isVisible") &&  mobileNavHeading[0].classList.contains('isVisible')) {
+        if (mobileNavUl[0].classList.contains("isVisible") &&  mobileNavHeading[0].classList.contains('isVisibleNavHeading')) {
             setTimeout(showMobileNavContent, 100)
         } else {
             setTimeout(showMobileNavContent, 500)
