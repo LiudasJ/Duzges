@@ -6,185 +6,184 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5db77d51c5.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Dūzgės sodyba | Kontaktai</title>
+</head>
+<body>
+    <header class="header-wrapper">
+        <div class="top-wrapper flex">
+            <div class="logo-div flex-center">
+                <img src="../images/logo.png" width="70px" alt="Duzges sodyba">
+            </div>
+            <nav class="nav relative">
+                <ul class="list-items flex">
+                    <li><a href="../index.html"><b>Apie mus</b></a></li>
+                    <li><a href="../paslaugos/index.html"><b>Paslaugos</b></a></li>
+                    <li><a href="#"><b>Kontaktai</b></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="burger-wrapper absolute">
+            <div class="burger-item"></div>
+            <div class="burger-item"></div>
+            <div class="burger-item"></div>
+        </div>
+        <div class="mobile-nav-wrapper absolute">
+            <ul class="mobile-nav-ul">
+                <li><i class="fas fa-home"></i><a href="../index.html">Pagrindinis</a></li>
+                <li><i class="fas fa-info-circle"></i><a href="../paslaugos/index.html">Paslaugos</a></li>
+                <li><i class="fas fa-street-view"></i><a href="#">Kontaktai</a></li>
+            </ul>
+            <h3 class="mobile-nav-heading text-align-center main-color">Dūzgės sodyba</h3>
+        </div>
+    </header>
+    <main>
+        <h2 class="main-color text-align-center heading-bottom-border">Kontaktinė informacija</h2>
+        <div class="contacts-container flex relative">
+            <div class="contacts-bg flex-center">
+                <img src="../images/bee-1096917.png" alt="paveiksliukas bitė" width="400px">
+            </div>
+            <form id="form" class="form-wrapper absolute" method="POST">
+                <h2 class="main-color heading-bottom-border">Parašykite užpildę formą:</h2>
+                <div class="form-item-wrapper flex">
+                    <div class="form-item">
+                        <div class="form-label">
+                            <label><b>Vardas*</b></label>
+                        </div>
+                        <div class="form-input">
+                            <input class="input-field" type="text" placeholder="Įveskite savo vardą" name="fname">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="form-label">
+                            <label><b>El.paštas*</b></label>
+                        </div>
+                        <div class="form-input">
+                            <input class="input-field" type="text" placeholder="Įveskite savo pavardę" name="lname">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item-wrapper flex">
+                    <div class="form-item">
+                        <div class="form-label">
+                            <label><b>Tel. nr.</b></label>
+                        </div>
+                        <div class="form-input">
+                            <input class="input-field" type="text" placeholder="Įveskite telefono numerį" name="tel">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="form-label">
+                            <label><b>Tema</b></label>
+                        </div>
+                        <div class="form-input">
+                            <input class="input-field" type="text" placeholder="Klausimo tema" name="title">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-message-wrapper">    
+                    <label class="main-color"><b>Klauskite*&nbsp;<span id="message-length" class="message-length">Simbolių limitas: 0 / 300</span></b></label>
+                    <textarea id="messageText" class="input-field" rows="10" placeholder="Jūsų žinutė" name="message"></textarea>
+                </div>
+                <div class="submit-wrapper">
+                    <input id="formSendBtn" type="submit" value="Siųsti">
+                </div>
+                <div class="message-progress-bar-wrapper relative">
+                    <div id="progress-bar" class="progress-bar text-align-center absolute">0%</div>
+                </div>
+            </form>
+            <div class="contacts-wrapper flex absolute">
+                <div class="contacts-item flex">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i> 
+                    </div>
+                    <div class="contact-text">
+                        <p>Parašykite mums laišką:</p>
+                        <span><a class="email-link" href=""></a></span>
+                    </div> 
+                </div>
+                <div class="contacts-item flex">
+                    <div class="contact-icon">
+                        <i class="fas fa-street-view"></i>
+                    </div>
+                    <div class="contact-text"> 
+                        <p>Mūsų adresas:</p>
+                        <span>V.Gadono g. 22, Seda.</span>
+                    </div>
+                </div>
+                <div class="contacts-item flex">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text"> 
+                        <p>Paskambinkite mums:</p>
+                        <span><a href="tel:+37068770662">+37068770662 Jolanta</a></span>
+                        <span><a href="tel:+37067788325">+37067788325 Andrius</a></span>
+                    </div>
+                </div>
+                <div class="contacts-item flex">
+                    <div class="contact-text">
+                        <p>Kiti būdai susisiekt su mumis:</p>
+                        <div class="social">
+                            <a href="https://www.facebook.com/duzgessodyba/" target="_blank"><span><i class="fab fa-facebook"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-container flex">
+            <div class="map-icon flex-center"><i class="fas fa-car"></i></div>
+            <div class="map-link relative">        
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1320.7712549956118!2d22.091566755316784!3d56.16983553230985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                1!3m3!1m2!1s0x46e57058ad30e045%3A0xb37ae6cbb94b2188!2sV.%20Gadono%20g.%2022%2C%20Seda%2089379!5e0!3m2!1slt!2slt!4v1586721543842!5m2!1slt!2slt" 
+                width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <p class="absolute"><b>*įvažiavimas iš V.Gadono gatvės!</b></p>
+            </div>
+        </div>
+    </main>
+    <footer id="footer" class="footer relative">
+        <div class="footer-container flex">
+            <div class="footer-nav footer-section">
+                <h3>Siūlome paskaityti:</h3>
+                <ul>
+                    <li><a href="../index.html">Apie mus</a></li>
+                    <li><a href="../paslaugos/index.html">Paslaugos</a></li>
+                    <li><a href="#">Kontaktai</a></li>
+                </ul>
+            </div>
+            <div class="footer-services footer-section">
+                <h3>Greitoji navigacija</h3>
+                <ul>
+                    <li><a href="../paslaugos/index.html">Didžioji salė</a></li>
+                    <li><a href="../paslaugos/index.html">Mažoji salė</a></li>
+                    <li><a href="../paslaugos/index.html">Apgyvendinimas</a></li>
+                    <li><a href="../paslaugos/index.html">Maisto ruošimas</a></li>
+                    <li><a href="../paslaugos/index.html">Kubilo nuoma</a></li>
+                </ul>
+            </div>
+            <div class="footer-working-hours footer-section">
+                <h3>Sodybą apžiūrėti galite:</h3>
+                <ul>
+                    <li><span class="footer-info-text">I - VII: 8:00 - 21:00 val.</span></li>
+                    <li>Maloniai prašome prieš atvykstant<br>pranešti nurodytais kontaktais</li>
+                </ul>
+            </div>
+            <div class="footer-contacts footer-section">
+                <h3>Kontaktai:</h3>
+                <ul>
+                    <li><span class="footer-info-text"><a class="email-link" href=""></a></span></li>
+                    <li><span class="footer-info-text"><a href="tel:+37068770662">+37068770662</a></span> Jolanta</li>
+                    <li><span class="footer-info-text"><a href="tel:+37067788325">+37067788325</a></span> Andrius</li>
+                </ul>
+                <h3>Soc.tinklai:</h3>
+                <a class="footer-info-text" href="https://www.facebook.com/duzgessodyba/" target="_blank"><span><i class="fab fa-facebook"></i></span></a>
+            </div>
+        </div>
+        <div class="copyrights">
+            <p>Dūzgės sodyba, 2020</p>
+        </div>
+    </footer>
     <script src="../js/kontaktai.js"></script>
     <script src="../js/nav.js"></script>
     <script src="../js/email.js"></script>
-    <title>Dūzgės sodyba | Kontaktai</title>
-</head>
-<header class="header-wrapper">
-    <div class="top-wrapper flex">
-        <div class="logo-div flex-center">
-            <img src="../images/logo.png" width="70px" alt="Duzges sodyba">
-        </div>
-        <nav class="nav relative">
-            <ul class="list-items flex">
-                <li><a href="../index.html"><b>Apie mus</b></a></li>
-                <li><a href="../paslaugos/index.html"><b>Paslaugos</b></a></li>
-                <li><a href="#"><b>Kontaktai</b></a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="burger-wrapper absolute">
-        <div class="burger-item"></div>
-        <div class="burger-item"></div>
-        <div class="burger-item"></div>
-    </div>
-    <div class="mobile-nav-wrapper absolute">
-        <ul class="mobile-nav-ul">
-            <li><i class="fas fa-home"></i><a href="../index.html">Pagrindinis</a></li>
-            <li><i class="fas fa-info-circle"></i><a href="../paslaugos/index.html">Paslaugos</a></li>
-            <li><i class="fas fa-street-view"></i><a href="#">Kontaktai</a></li>
-        </ul>
-        <h3 class="mobile-nav-heading text-align-center main-color">Dūzgės sodyba</h3>
-    </div>
-</header>
-<main>
-    <h2 class="main-color text-align-center heading-bottom-border">Kontaktinė informacija</h2>
-    <div class="contacts-container flex relative">
-        <div class="contacts-bg flex-center">
-            <img src="../images/bee-1096917.png" alt="paveiksliukas bitė" width="400px">
-        </div>
-        <div class="form-wrapper absolute">
-            <h2 class="main-color heading-bottom-border">Parašykite užpildę formą:</h2>
-            <div class="form-item-wrapper flex">
-                <div class="form-item">
-                    <div class="form-label">
-                        <label><b>Vardas*</b></label>
-                    </div>
-                    <div class="form-input">
-                        <input class="input-field" type="text" placeholder="Įveskite savo vardą">
-                    </div>
-                </div>
-                <div class="form-item">
-                    <div class="form-label">
-                        <label><b>El.paštas*</b></label>
-                    </div>
-                    <div class="form-input">
-                        <input class="input-field" type="text" placeholder="Įveskite savo pavardę">
-                    </div>
-                </div>
-            </div>
-            <div class="form-item-wrapper flex">
-                <div class="form-item">
-                    <div class="form-label">
-                        <label><b>Tel. nr.</b></label>
-                    </div>
-                    <div class="form-input">
-                        <input class="input-field" type="text" placeholder="Įveskite telefono numerį">
-                    </div>
-                </div>
-                <div class="form-item">
-                    <div class="form-label">
-                        <label><b>Tema</b></label>
-                    </div>
-                    <div class="form-input">
-                        <input class="input-field" type="text" placeholder="Klausimo tema">
-                    </div>
-                </div>
-            </div>
-            <div class="form-message-wrapper">    
-                <label class="main-color"><b>Klauskite*&nbsp;<span id="message-length" class="message-length">Simbolių limitas: 0 / 300</span></b></label>
-                <textarea id="messageText" class="input-field" rows="10" placeholder="Jūsų žinutė"></textarea>
-            </div>
-            <div class="submit-wrapper">
-                <input type="submit" value="Siųsti">
-            </div>
-            <div class="message-progress-bar-wrapper relative">
-                <div id="progress-bar" class="progress-bar text-align-center absolute">0%</div>
-            </div>
-        </div>
-        <div class="contacts-wrapper flex absolute">
-            <div class="contacts-item flex">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i> 
-                </div>
-                <div class="contact-text">
-                    <p>Parašykite mums laišką:</p>
-                    <span><a class="email-link" href=""></a></span>
-                </div> 
-            </div>
-            <div class="contacts-item flex">
-                <div class="contact-icon">
-                    <i class="fas fa-street-view"></i>
-                </div>
-                <div class="contact-text"> 
-                    <p>Mūsų adresas:</p>
-                    <span>V.Gadono g. 22, Seda.</span>
-                </div>
-            </div>
-            <div class="contacts-item flex">
-                <div class="contact-icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="contact-text"> 
-                    <p>Paskambinkite mums:</p>
-                    <span><a href="tel:+37068770662">+37068770662 Jolanta</a></span>
-                    <span><a href="tel:+37067788325">+37067788325 Andrius</a></span>
-                </div>
-            </div>
-            <div class="contacts-item flex">
-                <div class="contact-text">
-                    <p>Kiti būdai susisiekt su mumis:</p>
-                    <div class="social">
-                        <a href="https://www.facebook.com/duzgessodyba/" target="_blank"><span><i class="fab fa-facebook"></i></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="map-container flex">
-        <div class="map-icon flex-center"><i class="fas fa-car"></i></div>
-        <div class="map-link relative">        
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1320.7712549956118!2d22.091566755316784!3d56.16983553230985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
-            1!3m3!1m2!1s0x46e57058ad30e045%3A0xb37ae6cbb94b2188!2sV.%20Gadono%20g.%2022%2C%20Seda%2089379!5e0!3m2!1slt!2slt!4v1586721543842!5m2!1slt!2slt" 
-            width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            <p class="absolute"><b>*įvažiavimas iš V.Gadono gatvės!</b></p>
-        </div>
-    </div>
-</main>
-<footer id="footer" class="footer relative">
-    <div class="footer-container flex">
-        <div class="footer-nav footer-section">
-            <h3>Siūlome paskaityti:</h3>
-            <ul>
-                <li><a href="../index.html">Apie mus</a></li>
-                <li><a href="../paslaugos/index.html">Paslaugos</a></li>
-                <li><a href="#">Kontaktai</a></li>
-            </ul>
-        </div>
-        <div class="footer-services footer-section">
-            <h3>Greitoji navigacija</h3>
-            <ul>
-                <li><a href="../paslaugos/index.html">Didžioji salė</a></li>
-                <li><a href="../paslaugos/index.html">Mažoji salė</a></li>
-                <li><a href="../paslaugos/index.html">Apgyvendinimas</a></li>
-                <li><a href="../paslaugos/index.html">Maisto ruošimas</a></li>
-                <li><a href="../paslaugos/index.html">Kubilo nuoma</a></li>
-            </ul>
-        </div>
-        <div class="footer-working-hours footer-section">
-            <h3>Sodybą apžiūrėti galite:</h3>
-            <ul>
-                <li><span class="footer-info-text">I - VII: 8:00 - 21:00 val.</span></li>
-                <li>Maloniai prašome prieš atvykstant<br>pranešti nurodytais kontaktais <i class="far fa-arrow-alt-circle-right"></i></li>
-            </ul>
-        </div>
-        <div class="footer-contacts footer-section">
-            <h3>Kontaktai:</h3>
-            <ul>
-                <li><span class="footer-info-text"><a class="email-link" href=""></a></span></li>
-                <li><span class="footer-info-text"><a href="tel:+37068770662">+37068770662</a></span> Jolanta</li>
-                <li><span class="footer-info-text"><a href="tel:+37067788325">+37067788325</a></span> Andrius</li>
-            </ul>
-            <h3>Soc.tinklai:</h3>
-            <a class="footer-info-text" href="https://www.facebook.com/duzgessodyba/" target="_blank"><span><i class="fab fa-facebook"></i></span></a>
-        </div>
-    </div>
-    <div class="copyrights">
-        <p>Dūzgės sodyba, 2020</p>
-    </div>
-</footer>
-<body>
 </body>
 </html>

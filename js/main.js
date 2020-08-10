@@ -1,10 +1,11 @@
-$(document).ready(function (){
 var firstHalfEmail = " info";
 var secondHalfEmail = "duzgessodyba.lt";
 var slideIndex = 1;
 var slides = document.getElementsByClassName("myImg");
 var modalimg = document.getElementById("modal-img");
 var captionText = document.getElementById("sample-showcase-alt");
+var prevBtn = document.getElementsByClassName('prev')[0];
+var nextBtn = document.getElementsByClassName('next')[0];
 
 showSlides(slideIndex);
 
@@ -14,10 +15,10 @@ function plusSlides(n) {
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
-$('.prev').on('click', function (){
+prevBtn.addEventListener('click', function (){
     plusSlides(-1);
 });
-$('.next').on('click', function () {
+nextBtn.addEventListener('click', function () {
     plusSlides(1);
 });
 
@@ -36,4 +37,3 @@ function showSlides(n) {
     modalimg.src = slides[slideIndex-1].src;
     captionText.innerHTML = slides[slideIndex-1].alt;
 }
-});
