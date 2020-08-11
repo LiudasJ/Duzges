@@ -2,6 +2,11 @@ const messageText = document.getElementById('messageText');
 const progressBar = document.getElementById('progress-bar');
 const messageLength = document.getElementById('message-length');
 const maxMessageLength = 300;
+const nameError = document.getElementById('error-name');
+const emailError = document.getElementById('error-email');
+const telError = document.getElementById('error-tel');
+const titleError = document.getElementById('error-title');
+const messageError = document.getElementById('error-message');
 
 const formInput = document.getElementsByClassName('form-input');
 for (i=0; i< formInput.length; i++) {
@@ -61,7 +66,8 @@ formSend.addEventListener('click', (e) => {
     xhr.open("POST", "../form.php", true);
     xhr.onreadystatechange = function () {
         if(this.readyState === 4 && this.status === 200) {
-            console.log(this.responseText);
+            const response = JSON.parse(this.responseText);
+            nameError.innerHTML = response['wrongName'];
         }
     } 
     xhr.send(formValues);
