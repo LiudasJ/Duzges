@@ -5,17 +5,12 @@ $success = array();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name = (!empty($_POST['fname'])) ? $_POST['fname'] : $errors['emptyName'] = "Reikalingas vardas";
-    $email = (!empty($_POST['email'])) ? $_POST['email'] : $errors['emptyEmail'] = "Reikalingas el.p.";
-    $tel = (!empty($_POST['tel'])) ? $_POST['tel'] : $errors['emptyTel'] = "Reikalingas tel.nr.";
-    $message = (!empty($_POST['message'])) ? $_POST['message'] : $errors['emptyMessage'] = "Reikalingas žinutės tekstas";
-    $title = (!empty($_POST['title'])) ? $_POST['title'] : $errors['emptyTitle'] = "Reikalinga tema";
+    $name = (!empty($_POST['fname'])) ? $_POST['fname'] : $errors['emptyName'] = "reikalingas vardas";
+    $email = (!empty($_POST['email'])) ? $_POST['email'] : $errors['emptyEmail'] = "reikalingas el.p.";
+    $tel = (!empty($_POST['tel'])) ? $_POST['tel'] : $errors['emptyTel'] = "reikalingas tel.nr.";
+    $message = (!empty($_POST['message'])) ? $_POST['message'] : $errors['emptyMessage'] = "reikalingas žinutės tekstas";
+    $title = (!empty($_POST['title'])) ? $_POST['title'] : $errors['emptyTitle'] = "reikalinga tema";
 
-}
-
-if (!empty($errors)) {
-    echo json_encode($errors);
-} else  {
     test_input($name);
     test_input($email);
     test_input($message);
@@ -23,29 +18,29 @@ if (!empty($errors)) {
     test_input($title);
     
     if (!preg_match_all("/^[a-zA-Ząčęėįšųūž ]*$/", $name)) {
-        $errors['wrongName'] = "Galimos tik raidės ir tarpeliai";
+        $errors['wrongName'] = "galimos tik raidės ir tarpeliai";
     } else if (strlen($name) > 50) {
-        $errors['longName'] = "Vardui skirta iki 50 simbolių";
+        $errors['longName'] = "vardui skirta iki 50 simbolių";
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors['wrongEmail'] = "Neteisingas el.p formatas";
+        $errors['wrongEmail'] = "neteisingas el.p formatas";
     } else if (strlen($email) > 50) {
-        $errors['longEmail'] = "El.p skirta iki 50 simbolių";
+        $errors['longEmail'] = "el.p skirta iki 50 simbolių";
     }
 
     if (!preg_match("/^[0-9+]*$/", $tel)) {
-        $errors['wrongTel'] = "Neteisingas tel. nr.";
+        $errors['wrongTel'] = "neteisingas tel. nr.";
     }
     if (!preg_match_all("/^[a-zA-Ząčęėįšųūž ]*$/", $title)) {
-        $errors['wrongTitle'] = "Galimos tik raidės ir tarpeliai";
+        $errors['wrongTitle'] = "galimos tik raidės ir tarpeliai";
     } else if (strlen($title) > 50) {
-        $errors['longTitle'] = "Temai skirta 50 simbolių";
+        $errors['longTitle'] = "temai skirta 50 simbolių";
     }
     if (strlen($message) > 300) {
         $errors['longMessage'] = "Įvedėte per ilgą žinutę";
     } else if (!preg_match_all("/^[a-zA-Z0-9 ]*$/", $message)) {
-        $errors['wrongMessage'] = "Galimos tik raidės, skaičiai ir tarpeliai";
+        $errors['wrongMessage'] = "galimos tik raidės, skaičiai ir tarpeliai";
     }  
 }
 

@@ -393,14 +393,13 @@ a {
     width: 150px;
     padding: 20px;
     margin-right: 10px;
-    background-color: #5D5C61;
-    color: white;
+    color: black;
     cursor: pointer;
     border-radius: 10px;
-    text-align: center;
+    border-bottom: 2px solid  #5D5C61;
 }
 .active-tablink {
-    background-color: rgba(233, 167, 62, 0.9);
+    border-bottom: 2px solid #E9A73E;
 }
 /* Kontaktai */
 .contacts-container {
@@ -569,6 +568,19 @@ a {
 }
 .map-link {
     width: 70%;
+}
+.error {
+    margin-left: 5px;
+    color: red;
+}
+.success-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 200px;
+    background: #d3d3d3;
+    border: 1px solid black;
 }
 /* Footer */
 .footer {
@@ -1087,7 +1099,7 @@ a {
         width: 120px;
     }
     .tablink:hover {
-        background-color: #ccc;
+        background: #f1f1f1;
     }
     .mobile-tablink-wrapper {
         display: none;

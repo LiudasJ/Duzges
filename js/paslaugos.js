@@ -10,9 +10,9 @@ for (i=0; i<tablink.length; i++) {
     let index = i;
     tablink[i].addEventListener('click', function(){
         for (j=0; j<tablink.length; j++) {
-            tablink[j].style.backgroundColor = "#5D5C61";
+            tablink[j].style.borderBottom = "2px solid  #5D5C61";
         }
-        tablink[index].style.backgroundColor = 'rgba(233, 167, 62, 0.9)';
+        tablink[index].style.borderBottom = '2px solid #E9A73E';
         hideServiceSection();
         serviceSection[index].style.display = "flex";
     });
@@ -29,7 +29,7 @@ function toggleTablinks() {
 }
 mobileServiceButton.addEventListener('click', function(){
     mobileTablinkWrapper[0].classList.toggle('mobile-tablink-wrapper-active'); 
-    toggleTablinks()
+    setTimeout(toggleTablinks,250);
 });
 
 for (i=0; i<mobileTabLink.length; i++) {

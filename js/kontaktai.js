@@ -7,6 +7,7 @@ const emailError = document.getElementById('error-email');
 const telError = document.getElementById('error-tel');
 const titleError = document.getElementById('error-title');
 const messageError = document.getElementById('error-message');
+const allErrorSpans = document.getElementsByClassName('error');
 
 const formInput = document.getElementsByClassName('form-input');
 for (i=0; i< formInput.length; i++) {
@@ -66,8 +67,53 @@ formSend.addEventListener('click', (e) => {
     xhr.open("POST", "../form.php", true);
     xhr.onreadystatechange = function () {
         if(this.readyState === 4 && this.status === 200) {
+            for (let i = 0; i < allErrorSpans.length; i++) {
+                allErrorSpans[i].innerHTML = "";
+            }
             const response = JSON.parse(this.responseText);
-            nameError.innerHTML = response['wrongName'];
+            if (response['emptyName']) {
+                nameError.innerHTML = response['emptyName'];
+            } else if (response['wrongName']) {
+                nameError.innerHTML = response['wrongName'];    
+            } else if (response['longName']) {
+                nameError.innerHTML = response['longName'];       
+            }  
+            
+            if (response['emptyEmail']) {
+                emailError.innerHTML = response['emptyEmail'];    
+            } else if (response['longEmail']) {
+                emailError.innerHTML = response['longEmail'];       
+            } else if (response['wrongEmail']) {
+                emailError.innerHTML = response['wrongEmail'];    
+            }
+
+            if (response['emptyTel']) {
+                telError.innerHTML = response['emptyTel'];    
+            } else if (response['wrongTel']) {
+                telError.innerHTML = response['wrongTel'];   
+            } 
+
+            if (response['emptyTitle']) {
+                titleError.innerHTML = response['emptyTitle'];    
+            } else if (response['wrongTitle']) {
+                titleError.innerHTML = response['wrongTitle'];   
+            } else if (response['longTitle']) {
+                titleError.innerHTML = response['longTitle'];     
+            }
+
+            if (response['emptyMessage']) {
+                messageError.innerHTML = response['emptyMessage'];    
+            } else if (response['wrongMessage']) {
+                messageError.innerHTML = response['wrongMessage'];   
+            } else if (response['longMessage']) {
+                messageError.innerHTML = response['longMessage'];     
+            }
+
+            if(response['saved']) {
+                progressBar.style.width = "100%";
+                progressBar.style.height = "auto";
+                progressBar.innerHTML = response['saved'];
+            }
         }
     } 
     xhr.send(formValues);
