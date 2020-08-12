@@ -390,7 +390,11 @@ a {
     align-items: center;
 }
 .tablink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 150px;
+    height: 30px;
     padding: 20px;
     margin-right: 10px;
     color: black;
@@ -591,7 +595,7 @@ a {
 }
 .footer-container  {
    padding: 20px;
-   justify-content: space-between;
+   justify-content: space-around;
 }
 .footer-container h3 {
     margin-top: 0;
