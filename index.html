@@ -54,19 +54,22 @@
         <article class="us-introduction-wrapper">
             <div class="us-img fl-left"></div>
             <h3 id="intro" class="main-color">Apie mūsų sodybą</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quaerat. Eos neque animi dolorem quos magnam veritatis voluptatum officiis perferendis!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore cumque atque totam enim voluptatum odio aliquid eos, doloribus accusantium?
+            <p>Mažeikių rajone, Sedos miestelyje ant Varduvos upės kranto įkurta sodyba, kurioje laukiami visi, norintys švęsti vestuves, vaikų krikštynas, jubiliejus, gimtadienius ar giminės sueigas.</p> 
+                <p>Sodybos patalpos taip pat pritaikytos renginiams, konferencijoms, mokymams, poilsiui bei trumpalaikiam apyvendinimui. Sodyba laukia svečių ištisus metus.
+                Nuo Mažeikių, Telšių ir Plungės iki sodybos  25 — 30 km. Į sodybą veda asfaltuoti keliai, tad  atvykti nekils sunkumų bet kokiu metų laiku.</p>  
+                <p>Dūzgės sodyba įsikūrusi miestelio pakraštyje, 1 hektaro plote. Erdvus kiemas, upė, žalieji plotai, pergolės, terasos, pavėsinės, automobilių parkavimo aikštelės užtikrina svečiams patogumą ir privatumą. 
+                Mes taip pat pasirūpinome svečiais, turinčiais judėjimo negalią. <br><br>
+                <span class="main-color">Dūzgės sodyba</span> — puiki vieta pabėgti nuo miesto šurmulio ir pabūti su savo artimaisiais gamtos prieglobstyje.  
             </p>
         </article>
         <article id="about-wrapper" class="about-wrapper flex-center">
-            <div class="services-wrapper flex">
+            <div class="services-wrapper flex relative">
                 <div class="banquet-wrapper relative">
                     <h2 class="main-color heading-bottom-border">Pokylių salės</h2>
-                    <div class="banquet-img hover-effect"></div>
+                    <div class="banquet-img hover-effect">
+                        <img id="banquet-img" class="service-about-img" src="images/pokyliu-saliu-nuoma-duzges-sodyba-changed.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="bubbles-container banquet-bubbles-container"></div>
                     <div class="service-desc">
                         <p>Mūsų sodyboje įrengtos 2 salės, puikiai tinkančios tiek kuklioms, tiek ir iškilmingoms šventėms. 
                             Didžiojoje salėje telpa iki 60 žmonių, mažojoje - apie 30.</p>
@@ -75,16 +78,22 @@
                 </div>
                 <div class="food-wrapper relative">
                     <h2 class="main-color heading-bottom-border">Maisto ruošimas</h2>
-                    <div class="food-img hover-effect"></div>
+                    <div class="food-img hover-effect">
+                        <img id="food-img" class ="service-about-img" src="images/salti-patiekalai-duzges-sodyba.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="bubbles-container food-bubbles-container"></div>
                     <div class="service-desc">
                         <p>Sodybos virtuvėje naudojame pramonines virykles bei orkaites, todėl maistą ruošiame patys ir galime 
-                            užtikrinti jo šviežumą ir skonį. Sodyboje ruošiami karštieji patiekalai bei užkandžiai alaus stalui</p>
+                            užtikrinti jo šviežumą ir skonį. Sodyboje ruošiami karštieji patiekalai bei užkandžiai alaus stalui.</p>
                     </div>
                     <a class="read-more btn primary-btn" href="/paslaugos/index.html#food">Skaityti daugiau</a>
                 </div>
                 <div class="accommodation-wrapper relative">
                     <h2 class="main-color heading-bottom-border">Apyvendinimas</h2>
-                    <div class="accommodation-img hover-effect"></div>
+                    <div class="accommodation-img hover-effect">
+                        <img id="accommodation-img" class ="service-about-img" src="images/apgyvendinimas.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="bubbles-container acco-bubbles-container"></div>
                     <div class="service-desc">
                         <p>Sodyboje įrengti dviviečiai, triviečiai ir keturviečiai kambariai bei bendro naudojimo dušai. 
                             Vasaros metu patogiai galime apgyvendinti apie 60 žmonių. Žiemos metu apie 50.</p>
@@ -93,11 +102,23 @@
                 </div>
                 <div class="bathtube-wrapper relative">
                     <h2 class="main-color heading-bottom-border">Kubilas</h2>
-                    <div class="bathtube-img hover-effect"></div>
+                    <div class="bathtube-img hover-effect">
+                        <img id="bathtube-img" class ="service-about-img" src="images/kubilo-nuoma-mazeikiuose.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="bubbles-container bathtube-bubbles-container"></div>
                     <div class="service-desc">
                         <p>Sodyboje neseniai pakeistas kubilas, kuriame vienu metu gali maudytis iki 12 asmenų.</p>
                     </div>
                     <a class="read-more btn primary-btn" href="/paslaugos/index.html#accommodation">Skaityti daugiau</a>
+                </div>
+                <div id="services-modal-wrapper">
+                    <span id="services-modal-closeBtn">&#9932;</span>
+                    <div>
+                        <img id="service-modal-img" src="images/auripictures-230.jpg" width="700px">
+                        <p id="services-modal-desc">kazkoks aprasymas bus cia</p>
+                    </div>
+                    <span id="services-modal-nextBtn" class="srvc-modal-img-btn">&#10095;</span>
+                    <span id="services-modal-prevBtn" class="srvc-modal-img-btn">&#10094;</span>
                 </div>
             </div>
         </article>

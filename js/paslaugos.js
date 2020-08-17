@@ -18,29 +18,6 @@ for (i=0; i<tablink.length; i++) {
     });
 }
 
-// var mobileServiceButton = document.getElementById('service-button');
-// var mobileTablinkWrapper = document.getElementsByClassName('mobile-tablink-wrapper');
-// var mobileTabLink = document.getElementsByClassName('mobile-tablink');
-
-// function toggleTablinks() {
-//     for (i=0; i<mobileTabLink.length; i++){
-//         mobileTabLink[i].classList.toggle('mobile-tablink-active')
-//     }  
-// }
-// mobileServiceButton.addEventListener('click', function(){
-//     mobileTablinkWrapper[0].classList.toggle('mobile-tablink-wrapper-active'); 
-//     setTimeout(toggleTablinks,250);
-// });
-
-// for (i=0; i<mobileTabLink.length; i++) {
-//     let mobileIndex = i;
-//     mobileTabLink[i].addEventListener('click', function(){
-//         hideServiceSection();
-//         serviceSection[mobileIndex].style.display = "flex";
-//         mobileTablinkWrapper[0].classList.toggle('mobile-tablink-wrapper-active'); 
-//         toggleTablinks();  
-//     })
-// }
 function makeServicesScrollable () {
     if (window.innerWidth <= 768) {
         for (let i = 0; i < serviceSection.length; i++) {

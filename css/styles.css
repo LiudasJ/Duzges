@@ -183,42 +183,59 @@ a {
 .banquet-img {
     height: 250px;
     width: 250px;
-    background-image: url(../images/pokyliu-saliu-nuoma-duzges-sodyba.jpg);
+    /* background-image: url(../images/pokyliu-saliu-nuoma-duzges-sodyba.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     margin: auto;
     border-radius: 50%;
     transition: 1s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bubbles-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100px;
+    margin: auto;
+    margin-top: 10px;
+}
+.bubble {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    background: #5D5C61;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.bubble:hover {
+    background: #d3d3d3;
 }
 .food-img {
     height: 250px;
     width: 250px;
-    background-image: url(../images/uzkandziai-duzges-sodyba.jpg);
-    background-position: center;
-    background-size: cover;
     margin: auto;
     border-radius: 50%;
     transition: 1s ease-in-out;
+    overflow: hidden;
 }
 .accommodation-img {
     height: 250px;
     width: 250px;
-    background-image: url(../images/apgyvendinimas.jpg);
-    background-position: center;
-    background-size: cover;
     margin: auto;
     border-radius: 50%;
     transition: 1s ease-in-out;
+    overflow: hidden;
 }
 .bathtube-img {
     height: 250px;
     width: 250px;
-    background-image: url(../images/kubilas-duzges-sodyba.jpg);
-    background-position: center;
-    background-size: cover;
     margin: auto;
     border-radius: 50%;
-    transition: 1s ease-in-out;   
+    transition: 1s ease-in-out;
+    overflow: hidden;   
 }
 .service-desc {
     text-align: justify;
@@ -239,6 +256,47 @@ a {
     bottom: 20px;
     right: 20px;
     width: 25%;
+}
+#services-modal-wrapper {
+    position: absolute;
+    width: 900px;
+    height: 700px;
+    background: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #d3d3d3;
+    font-size: 20px;
+    display: none;
+}
+#services-modal-closeBtn {
+    /* color: #d3d3d3; */
+    font-size: 22px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+}
+.srvc-modal-img-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #E9A73E;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+}
+#services-modal-nextBtn {
+    top: 45%;
+    right: 40px;
+}
+#services-modal-prevBtn {
+    top: 45%;
+    left: 40px;
 }
 .gallery-wrapper {
     height: auto;
@@ -275,7 +333,12 @@ a {
     font-size: 20px;
 }
 .prev, .next {
-    padding: 5px 11px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 50%;
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -285,10 +348,26 @@ a {
     border-radius: 50%;
 }
 .next {
-    right: 0px;
+    right: 45px;
 }
 .prev {
-    left: 0px;
+    left: 45px;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+background: #E9A73E; 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background:#a67d3d; 
 }
 /* Paslaugos */
 .services-introduction-wrapper {
@@ -554,24 +633,9 @@ a {
 .map-container iframe {
     border-radius: 20px;
 }
-.map-icon {
-    width: 30%;
-}
-.map-icon i {
-    font-size: 150px;
-    color: #E9A73E;
-    transition: ease-in-out;
-    animation-name: car;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
-}
-@keyframes car {
-    0% {font-size: 0px; color:#a67d3d;}
-    50% {font-size: 150px; color: #E9A73E;}
-
-}
 .map-link {
-    width: 70%;
+    width: 100%;
+    margin-bottom: 20px;
 }
 .error {
     margin-left: 5px;
@@ -911,9 +975,6 @@ a {
     .map-container {
         display: block;
     }
-    .map-icon {
-        display: none;
-    }
     .map-link {
         width: 100%;
         margin-bottom: 20px;
@@ -1034,9 +1095,6 @@ a {
     .map-container {
         display: block;
     }
-    .map-icon {
-        display: none;
-    }
     .map-link {
         width: 100%;
         margin-bottom: 20px;
@@ -1110,5 +1168,9 @@ a {
     }
     .service-button {
         display: none;
+    }
+    .prev:hover, .next:hover {
+        color: #282828;
+        border: 1px solid #282828;
     }
 }
