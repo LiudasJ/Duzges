@@ -11,6 +11,9 @@ body {
 .fl-right {
     float: right;
 }
+.fas {
+    font-size: 14px;
+}
 .heading-bottom-border {
     border-radius: 20px;
 }
@@ -126,7 +129,7 @@ a {
     justify-content: space-around;
 }
 .btn {
-    padding: 10px;
+    padding: 5px;
     width: 100px;
     text-align: center;
     border-radius: 20px;
@@ -179,13 +182,11 @@ a {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     margin: 20px 0;
+    cursor: pointer;
 }
 .banquet-img {
     height: 250px;
     width: 250px;
-    /* background-image: url(../images/pokyliu-saliu-nuoma-duzges-sodyba.jpg);
-    background-position: center;
-    background-size: cover; */
     margin: auto;
     border-radius: 50%;
     transition: 1s ease-in-out;
@@ -255,48 +256,35 @@ a {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    width: 25%;
+    width: 200px;
 }
 #services-modal-wrapper {
     position: absolute;
     width: 900px;
     height: 700px;
     background: rgba(0, 0, 0, 0.7);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 13%;
+    color: #d3d3d3;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #d3d3d3;
-    font-size: 20px;
-    display: none;
+    border-radius: 15px;
+    transition: .5s ease-in-out;
+}
+.scale-0 {
+    transform: scale(0);
+}
+.scale-1 {
+    transform: scale(1);    
 }
 #services-modal-closeBtn {
-    /* color: #d3d3d3; */
     font-size: 22px;
     position: absolute;
     right: 30px;
     top: 20px;
     cursor: pointer;
-}
-.srvc-modal-img-btn {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background: #E9A73E;
-    position: absolute;
-    border-radius: 50%;
-    color: white;
-}
-#services-modal-nextBtn {
-    top: 45%;
-    right: 40px;
-}
-#services-modal-prevBtn {
-    top: 45%;
-    left: 40px;
 }
 .gallery-wrapper {
     height: auto;
@@ -317,7 +305,11 @@ a {
     padding: 5px;
     transition: .5s ease-in-out;
 }
+#modal-img {
+    border-radius: 10px;
+}
 .myImg {
+    border-radius: 5px;
     transition: .5s ease-in-out;
 }
 .sample-showcase {
@@ -364,8 +356,6 @@ border-radius: 10px;
 background: #E9A73E; 
 border-radius: 10px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 background:#a67d3d; 
 }
@@ -781,9 +771,6 @@ background:#a67d3d;
         font-size: 18px;
         padding: 5px;
     }
-    .btn {
-        padding: 5px;
-    }
     .us-introduction-wrapper {
         height: auto;
         display: flex;
@@ -808,9 +795,6 @@ background:#a67d3d;
     }
     .service-desc p {
         font-size: 16px;
-    }
-    .read-more {
-        width: 45%;
     }
     .gallery-wrapper {
         border-radius: 20px;
@@ -1018,9 +1002,6 @@ background:#a67d3d;
     .accommodation-wrapper, .bathtube-wrapper {
         width: 60%;
     }
-    .read-more {
-        width: 30%;
-    }
     .gallery-wrapper {
         padding: 10px;
     }
@@ -1064,6 +1045,13 @@ background:#a67d3d;
     .main-banquet-img img {
         width: 90%;
         margin: auto;
+    }
+    #services-modal-wrapper {
+        width: 90%;
+        margin: auto;
+    }
+    #service-modal-img {
+        width: 600px;
     }
     .contacts-container {
         flex-direction: column;
@@ -1141,11 +1129,6 @@ background:#a67d3d;
         -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
-    }
-    .hover-effect:hover {
-        height: 300px;
-        width: 300px;
-        border-radius: 20px;
     }
     .mini-nav li a:hover {
         color: #E9A73E;

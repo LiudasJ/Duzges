@@ -22,13 +22,12 @@ nextBtn.addEventListener('click', function () {
     plusSlides(1);
 });
 
-for (var i=0; i<slides.length; i++) {
-    let index = i;
-    let ii = i + 1;
+for (let i = 0; i < slides.length; i++) {
+    let index = i + 1;
     slides[i].onclick = function(){
-        modalimg.src = slides[index].src;
+        modalimg.src = slides[i].src;
         captionText.innerHTML = this.alt;
-        slideIndex = ii;
+        slideIndex = index;
     };
 }
 function showSlides(n) {
@@ -46,18 +45,16 @@ const banquetImgContainer = document.getElementsByClassName('banquet-img');
 const foodImgContainer  = document.getElementsByClassName('food-img');
 
 var banquetImgList = ['images/pokyliu-saliu-nuoma-duzges-sodyba-changed.jpg', 'images/auripictures-230.jpg', 'images/apvaliu-stalu-nuoma-duzges-sodyba.jpg'];
-var foodImgList = ['images/salti-patiekalai-duzges-sodyba.jpg', 'images/uzkandeliai-duzges-sodyba.jpg', 'images/maisto-ruosimas.jpg'];
-var accoImgList = ['images/apgyvendinimas.jpg', 'images/apgyvendinimas-duzges-sodyba.jpg'];
-var bathtubeImgList = ['images/kubilo-nuoma-mazeikiuose.jpg', 'images/kubilas-duzges-sodyba.jpg'];
+var foodImgList = ['images/salti-patiekalai-duzges-sodyba.jpg', 'images/uzkandeliai-duzges-sodyba.jpg', 'images/duonos-tortas-duzges-sodyba.jpg'];
+var accoImgList = ['images/apgyvendinimas.jpg', 'images/apgyvendinimas-duzges-sodyba.jpg', 'images/apgyvendinimas-duzges-sodyba.jpg'];
+var bathtubeImgList = ['images/kubilo-nuoma-mazeikiuose.jpg', 'images/kubilas-duzges-sodyba.jpg', 'images/kubilo-nuoma-mazeikiuose.jpg'];
 var counter = 0;
-
-// reikia pakeist f-ja, kuri reaguotu i bubblesu paspaudima ir pakeistu nuotrauka
-// reikia f-jos, kuri paspaudus didziaja nuotrauka, iskviestu modal
 
 const banquetBubbleContainer = document.getElementsByClassName('banquet-bubbles-container');
 const foodBubbleContainer = document.getElementsByClassName('food-bubbles-container');
 const accoBubbleContainer = document.getElementsByClassName('acco-bubbles-container');
 const bathtubeBubbleContainer = document.getElementsByClassName('bathtube-bubbles-container');
+const bubble = document.getElementsByClassName('bubble');
 
 createBubbles(banquetImgList, banquetBubbleContainer[0]);
 createBubbles(foodImgList, foodBubbleContainer[0]);
@@ -67,7 +64,7 @@ createBubbles(bathtubeImgList, bathtubeBubbleContainer[0]);
 changeServicesImg(banquetImg, banquetImgList, 0);
 changeServicesImg(foodImg, foodImgList, 3);
 changeServicesImg(accoImg, accoImgList, 6);
-changeServicesImg(bathtubeImg, bathtubeImgList, 8);
+changeServicesImg(bathtubeImg, bathtubeImgList, 9);
 
 function createBubbles (imgList, container) {
     for (let i = 0; i<imgList.length; i++) {
@@ -76,48 +73,64 @@ function createBubbles (imgList, container) {
         container.appendChild(bubble);
     }
 }
+
+function restoreBubbleBgColor () {
+    for (let i = 0; i < bubble.length; i++) {
+        bubble[i].style.backgroundColor = "#5D5C61";
+    }
+}
+
 function changeServicesImg (img, imgList, number) {
-    var bubble = document.getElementsByClassName('bubble');
     var counter = 0;
     while (bubble[number].parentElement.parentElement === img.parentElement.parentElement) {
         let index = number;
         let actualcounter = counter;
         bubble[index].addEventListener('click', ()=>{
+            restoreBubbleBgColor();
+            bubble[index].style.backgroundColor = "#d3d3d3";
             img.src = imgList[actualcounter];
         })
-        console.log(bubble[number].parentElement.parentElement);
         number++;
         counter++;
-        if (number == 10) {
+        if (number == 12) {
             break;
         }
     }
 }
 
-function openServiceModal () {
-    const serviceModal = document.getElementById('services-modal-wrapper');
-    const serviceModalImg = document.getElementById('service-modal-img');
-    const aboutImg = document.getElementsByClassName('service-about-img');
+const serviceModal = document.getElementById('services-modal-wrapper');
+const serviceModalCloseBtn = document.getElementById('services-modal-closeBtn');
+const serviceModalImg = document.getElementById('service-modal-img');
+const aboutImg = document.getElementsByClassName('service-about-img');
 
-    for (i = 0; i < aboutImg.length; i++) {
-        let index = i;
-        aboutImg[index].addEventListener('click', () => {
-            serviceModal.style.display = "block";
-            serviceModalImg.src = aboutImg[index].src;
+function openServiceModal () {
+    serviceModal.classList.replace("scale-0", "scale-1"); 
+}
+function closeServiceModal () {
+    serviceModal.classList.replace("scale-1", "scale-0");   
+}
+
+if (window.innerWidth > 768) {
+    for (let i = 0; i < aboutImg.length; i++) {
+        aboutImg[i].addEventListener('click', () => {
+            openServiceModal();
+            serviceModalImg.src = aboutImg[i].src;
+            var aboutWrapperOffsetHeight = aboutWrapper.offsetHeight;
+            var aboutWrapperOffsetTop = aboutWrapper.offsetTop;
+            var aboutWrapperOffsetBottom = aboutWrapperOffsetTop + aboutWrapperOffsetHeight;
+            var yAxis = window.scrollY;   
+            if ((yAxis >= aboutWrapperOffsetTop) && (yAxis +  servicesModal.offsetHeight <= aboutWrapperOffsetBottom)) { 
+                servicesModal.style.top = `${(yAxis - aboutWrapperOffsetTop)}px`;
+            } else if (yAxis < aboutWrapperOffsetTop) {
+                servicesModal.style.top = "0";
+            } else if (yAxis + servicesModal.offsetHeight > aboutWrapperOffsetBottom) {
+                servicesModal.style.top = `${aboutWrapperOffsetHeight - servicesModal.offsetHeight}`; 
+            }
         })
     }
 }
-openServiceModal ();
+
+serviceModalCloseBtn.addEventListener('click', closeServiceModal);
+
 const servicesModal = document.getElementById('services-modal-wrapper');
 const aboutWrapper = document.getElementById('about-wrapper');
-
-window.addEventListener('scroll', () => {
-    var aboutWrapperOffsetHeight = aboutWrapper.offsetHeight;
-    var aboutWrapperOffsetTop = aboutWrapper.offsetTop;
-    var aboutWrapperOffsetBottom = aboutWrapperOffsetTop + aboutWrapperOffsetHeight;
-    var yAxis = window.scrollY;
-
-    if ((yAxis >= aboutWrapperOffsetTop) && (yAxis +  servicesModal.offsetHeight <= aboutWrapperOffsetBottom)) {
-        servicesModal.style.top = `${(yAxis - aboutWrapperOffsetTop) + 360}px`;       
-    }
-});
