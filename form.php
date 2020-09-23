@@ -60,9 +60,18 @@ if (empty($errors)) {
 
     $sql = "INSERT INTO forma (FirstName, Email, Tel, Title, Question) VALUES ('$name', '$email', '$tel', '$title', '$message')";
     $conn->exec($sql);
-    $success['saved'] = "Žinutė sėkmingai išsiųsta! Susisieksime su Jumis kaip įmanoma greičiau";
+    $success['saved'] = "Žinutė sėkmingai išsiųsta! Susisieksime su Jumis kaip įmanoma greičiau.";
     echo json_encode($success);
     $conn = null;
+
+    $email_from = 'info@duzgessodyba.com';
+    $email_subject = "Nauja užklausa sodybos puslapyje";
+    $email_body = "Gavote naują žinutę iš $name.\n" . "Žinutės tekstas:\n $message";
+    $to = "jonusas.liudas@gmail.com";
+    $headers = "Laiškas peradresuotas iš: $email_from \r\n";
+    $headers .= "Turite atrašyti į šį paštą: $email \r\n";
+    mail($to,$email_subject,$email_body,$headers);
+    
     } else {
         echo json_encode($errors);
     }

@@ -189,7 +189,10 @@ a {
     width: 250px;
     margin: auto;
     border-radius: 50%;
-    transition: 1s ease-in-out;
+    background-image: url(../images/auripictures-230.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .5s ease-in-out;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -219,7 +222,10 @@ a {
     width: 250px;
     margin: auto;
     border-radius: 50%;
-    transition: 1s ease-in-out;
+    background-image: url(../images/duonos-tortas-duzges-sodyba.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .5s ease-in-out;
     overflow: hidden;
 }
 .accommodation-img {
@@ -227,7 +233,10 @@ a {
     width: 250px;
     margin: auto;
     border-radius: 50%;
-    transition: 1s ease-in-out;
+    background-image: url(../images/apgyvendinimas.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .5s ease-in-out;
     overflow: hidden;
 }
 .bathtube-img {
@@ -235,7 +244,10 @@ a {
     width: 250px;
     margin: auto;
     border-radius: 50%;
-    transition: 1s ease-in-out;
+    background-image: url(../images/kubilas-duzges-sodyba.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .5s ease-in-out;
     overflow: hidden;   
 }
 .service-desc {

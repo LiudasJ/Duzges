@@ -37,18 +37,15 @@ function showSlides(n) {
     captionText.innerHTML = slides[slideIndex-1].alt;
 }
 
-const banquetImg = document.getElementById('banquet-img');
-const foodImg = document.getElementById('food-img');
-const accoImg = document.getElementById('accommodation-img');
-const bathtubeImg = document.getElementById('bathtube-img');
-const banquetImgContainer = document.getElementsByClassName('banquet-img');
-const foodImgContainer  = document.getElementsByClassName('food-img');
+const banquetImg = document.getElementsByClassName('banquet-img');
+const foodImg = document.getElementsByClassName('food-img');
+const accoImg = document.getElementsByClassName('accommodation-img');
+const bathtubeImg = document.getElementsByClassName('bathtube-img');
 
-var banquetImgList = ['images/pokyliu-saliu-nuoma-duzges-sodyba-changed.jpg', 'images/auripictures-230.jpg', 'images/apvaliu-stalu-nuoma-duzges-sodyba.jpg'];
-var foodImgList = ['images/salti-patiekalai-duzges-sodyba.jpg', 'images/uzkandeliai-duzges-sodyba.jpg', 'images/duonos-tortas-duzges-sodyba.jpg'];
+var banquetImgList = ['images/auripictures-230.jpg', 'images/pokyliu-saliu-nuoma-duzges-sodyba-changed.jpg', 'images/apvaliu-stalu-nuoma-duzges-sodyba.jpg'];
+var foodImgList = ['images/duonos-tortas-duzges-sodyba.jpg', 'images/salti-patiekalai-duzges-sodyba.jpg', 'images/uzkandziai-duzges-sodyba.jpg'];
 var accoImgList = ['images/apgyvendinimas.jpg', 'images/apgyvendinimas-duzges-sodyba.jpg', 'images/apgyvendinimas-duzges-sodyba.jpg'];
-var bathtubeImgList = ['images/kubilo-nuoma-mazeikiuose.jpg', 'images/kubilas-duzges-sodyba.jpg', 'images/kubilo-nuoma-mazeikiuose.jpg'];
-var counter = 0;
+var bathtubeImgList = ['images/kubilas-duzges-sodyba.jpg', 'images/kubilo-nuoma-mazeikiuose.jpg', 'images/duzges-sodyba-kubilo-terasa.jpg'];
 
 const banquetBubbleContainer = document.getElementsByClassName('banquet-bubbles-container');
 const foodBubbleContainer = document.getElementsByClassName('food-bubbles-container');
@@ -61,10 +58,10 @@ createBubbles(foodImgList, foodBubbleContainer[0]);
 createBubbles(accoImgList, accoBubbleContainer[0]);
 createBubbles(bathtubeImgList, bathtubeBubbleContainer[0]);
 
-changeServicesImg(banquetImg, banquetImgList, 0);
-changeServicesImg(foodImg, foodImgList, 3);
-changeServicesImg(accoImg, accoImgList, 6);
-changeServicesImg(bathtubeImg, bathtubeImgList, 9);
+changeServicesImg(banquetImg[0], banquetImgList, 0);
+changeServicesImg(foodImg[0], foodImgList, 3);
+changeServicesImg(accoImg[0], accoImgList, 6);
+changeServicesImg(bathtubeImg[0], bathtubeImgList, 9);
 
 function createBubbles (imgList, container) {
     for (let i = 0; i<imgList.length; i++) {
@@ -82,13 +79,13 @@ function restoreBubbleBgColor () {
 
 function changeServicesImg (img, imgList, number) {
     var counter = 0;
-    while (bubble[number].parentElement.parentElement === img.parentElement.parentElement) {
+    while (bubble[number].parentElement.parentElement === img.parentElement) {
         let index = number;
         let actualcounter = counter;
         bubble[index].addEventListener('click', ()=>{
             restoreBubbleBgColor();
             bubble[index].style.backgroundColor = "#d3d3d3";
-            img.src = imgList[actualcounter];
+            img.style.backgroundImage = `url(/${imgList[actualcounter]}`;
         })
         number++;
         counter++;
@@ -114,7 +111,9 @@ if (window.innerWidth > 768) {
     for (let i = 0; i < aboutImg.length; i++) {
         aboutImg[i].addEventListener('click', () => {
             openServiceModal();
-            serviceModalImg.src = aboutImg[i].src;
+            let imgUrl = aboutImg[i].style.backgroundImage;
+            let newUrl = imgUrl.slice(6,(imgUrl.length - 2));
+            serviceModalImg.src = newUrl;
             var aboutWrapperOffsetHeight = aboutWrapper.offsetHeight;
             var aboutWrapperOffsetTop = aboutWrapper.offsetTop;
             var aboutWrapperOffsetBottom = aboutWrapperOffsetTop + aboutWrapperOffsetHeight;
