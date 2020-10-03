@@ -9,24 +9,16 @@ const titleError = document.getElementById('error-title');
 const messageError = document.getElementById('error-message');
 const allErrorSpans = document.getElementsByClassName('error');
 
-const formInput = document.getElementsByClassName('form-input');
-for (i=0; i< formInput.length; i++) {
-    formInput[i].addEventListener('focusin', function (){
-        this.style.border = "1px solid black"
-        });
-    };   
-for (i=0; i < formInput.length; i++) {
-    formInput[i].addEventListener('focusout', function (){
-            this.style.border = "1px solid white"
-        });
-    };
-
 messageText.addEventListener('keyup', () => {
-    progressBar.style.display = 'block';
     const value = messageText.value;
     const currentLength = value.length;
     const progressBarLength = ((currentLength * 100)/ maxMessageLength);
-    if (isMessageTooLong(currentLength)) {
+    progressBar.style.display = 'block';
+    if (currentLength == 0) {
+        progressBar.style.display = 'none';
+        messageLength.innerHTML = "Simbolių limitas:0/300";
+    }
+    else if (isMessageTooLong(currentLength)) {
         messageText.style.border = '3px solid red';
         progressBar.style.width = '100%';
         progressBar.innerHTML = '100%';
@@ -44,16 +36,16 @@ function isMessageTooLong(messageLength) {
     } 
 }
 var input = document.getElementsByClassName('input-field');
-for (i=0; i<input.length; i++) {
-    let index = i;
-    input[index].addEventListener('focus', function(){
-        input[index].style.border = "1px solid green";
+for (let i=0; i<input.length; i++) {
+    input[i].addEventListener('focus', function(){
+        input[i].style.border = "1px solid green";
+        input[i].style.appearance = 'none';
+        input[i].style.webkitAppearance = 'none';
     });
 }
-for (i=0; i<input.length; i++) {
-    let index = i;
-    input[index].addEventListener('focusout', function(){
-        input[index].style.border = "1px solid black";
+for (let i=0; i<input.length; i++) {
+    input[i].addEventListener('focusout', function(){
+        input[i].style.border = "1px solid black";
     });
 };
 

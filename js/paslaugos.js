@@ -1,39 +1,77 @@
-var serviceSection = document.getElementsByClassName('main-banquet')
-var tablink = document.getElementsByClassName('tablink');
+const serviceSection = document.getElementsByClassName('main-banquet');
+const serviceWrapper = document.getElementsByClassName('services-banquet-wrapper');
+const tablink = document.getElementsByClassName('tablink');
+const serviceItem = document.getElementsByClassName('service-item');
+
+for(let i = 0; i < serviceItem.length; i++) {
+    serviceItem[i].addEventListener('click', ()=>{
+        hideServiceSection();
+        restoreTablinkBottomBorderColor();
+        const scroll = serviceWrapper[0].offsetTop;
+        switch (i) {
+            case 0:
+                serviceSection[3].style.display = 'flex';
+                tablink[3].style.borderBottom = '2px solid #E9A73E';
+                window.scrollTo({top:scroll, behavior: "smooth"});
+                break;
+            case 1:
+                serviceSection[2].style.display = 'flex';
+                tablink[2].style.borderBottom = '2px solid #E9A73E';
+                window.scrollTo({top:scroll, behavior: "smooth"});
+                break;
+            case 2:
+                serviceSection[5].style.display = 'flex';
+                tablink[5].style.borderBottom = '2px solid #E9A73E';
+                window.scrollTo({top:scroll, behavior: "smooth"});
+                break;       
+            }
+    }) 
+}
 
 function hideServiceSection () {
     for (i=0; i < serviceSection.length; i++) {
         serviceSection[i].style.display = 'none';
     }
 }
-for (i=0; i<tablink.length; i++) {
-    let index = i;
-    tablink[i].addEventListener('click', function(){
-        for (j=0; j<tablink.length; j++) {
-            tablink[j].style.borderBottom = "2px solid  #5D5C61";
-        }
-        tablink[index].style.borderBottom = '2px solid #E9A73E';
-        hideServiceSection();
-        serviceSection[index].style.display = "flex";
-    });
+
+function showServiceSection () {
+    for (i=0; i < serviceSection.length; i++) {
+        serviceSection[i].style.display = 'block';
+    }   
 }
 
-function makeServicesScrollable () {
-    if (window.innerWidth <= 768) {
-        for (let i = 0; i < serviceSection.length; i++) {
-            serviceSection[i].style.display = 'block';
-        }    
-    } else {
-        for (let i = 0; i < serviceSection.length; i++) {
-            serviceSection[i].style.display = 'none';
-        }
-        for (j=0; j<tablink.length; j++) {
-            tablink[j].style.borderBottom = "2px solid  #5D5C61";
-        }
-        serviceSection[0].style.display = 'flex';
-        tablink[0].style.borderBottom = '2px solid #E9A73E';   
+function restoreTablinkBottomBorderColor () {
+    for (let i=0; i < tablink.length; i++) {
+        tablink[i].style.borderBottom = "2px solid #5D5C61";
     }
 }
-window.addEventListener('resize', ()=>{
-    makeServicesScrollable();
-});
+function removeActiveClass () {
+    for (i = 0; i < serviceSection.length; i++) {
+        serviceSection[i].classList.remove('active');
+    }
+}
+
+for (let i = 0; i < tablink.length; i++) {
+    tablink[i].addEventListener('click', function(){
+        restoreTablinkBottomBorderColor();
+        removeActiveClass();
+        tablink[i].style.borderBottom = '2px solid #E9A73E';
+        hideServiceSection();
+        serviceSection[i].style.display = "flex";
+        serviceSection[i].classList.add('active');
+    });
+}
+window.addEventListener('resize', (e) => {
+    e.preventDefault();
+    if (window.innerWidth <= 1250) {
+        showServiceSection();
+    } else {
+        hideServiceSection();
+        for (let i = 0; i < serviceSection.length; i++) {
+            if (serviceSection[i].classList.contains('active')) {
+                serviceSection[i].style.display = 'flex'; 
+                tablink[i].style.borderBottom = '2px solid #E9A73E';   
+            }
+        }
+    }
+})

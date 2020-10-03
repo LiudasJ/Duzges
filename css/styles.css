@@ -4,12 +4,10 @@ body {
     box-sizing: border-box;
     max-width: 1400px;
     font-family: 'Courgette', cursive;
+    scroll-behavior: smooth;
 }
 .fl-left {
     float: left;
-}
-.fl-right {
-    float: right;
 }
 .fas {
     font-size: 14px;
@@ -58,16 +56,42 @@ a {
     height: auto;
 }
 .top-wrapper {
-    height: 150px;
+    height: 100px;
+}
+.main-top-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+.main-logo-div {
+    width: 10%;
+    height: 200px;
+    margin: auto;
 }
 .logo-div {
     width: 10%;
+    height: 100px;
 }
 .logo-div img {
+    width: 60px;
     transition: .5s ease-in-out;
 }
+.top-wrapper-heading {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.top-wrapper-heading h1 {
+    font-size: 22px;
+    margin: 0 0 0 10px;
+}
+.top-wrapper-heading h2 {
+    font-size: 22px;
+    margin: 0 0 0 10px;
+    border: none;
+    margin: 0;
+}
 .nav {
-    width: 90%;
+    width: 60%;
 }
 .nav ul {
     list-style: none;
@@ -90,6 +114,16 @@ a {
     padding: 10px;
     transition: .5s ease-in-out;
 }
+.heading-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
 .title-wrapper {
     height: 600px;
     color: #282828;
@@ -104,21 +138,18 @@ a {
 .title h1 {
     text-align: center;
     font-size: 6vh;
-    color: white;
-    border: 1px solid #E9A73E;
+    color: #E9A73E;
     border-radius: 20px;
-    background-color: rgba(233, 167, 62, 0.9);
     padding: 10px;
     width: 400px;
     margin: auto;
+    text-shadow: 1px 1px #282828 ;
 }
 .title p {
     font-size: 30px;
     text-align: center;
-    color: #282828;
-    border: 1px solid white;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    color: #E9A73E;
+    text-shadow: 1px 1px #282828 ;
     padding: 10px;
 }
 .header-btns-wrapper {
@@ -182,21 +213,17 @@ a {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     margin: 20px 0;
-    cursor: pointer;
 }
-.banquet-img {
+.default-info-shape {
     height: 250px;
     width: 250px;
     margin: auto;
     border-radius: 50%;
-    background-image: url(../images/auripictures-230.jpg);
     background-position: center;
     background-size: cover;
     transition: .5s ease-in-out;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
 }
 .bubbles-container {
     display: flex;
@@ -210,45 +237,12 @@ a {
     width: 10px;
     height: 10px;
     padding: 2px;
-    background: #5D5C61;
+    background: #d3d3d3;
     border-radius: 50%;
     cursor: pointer;
 }
 .bubble:hover {
     background: #d3d3d3;
-}
-.food-img {
-    height: 250px;
-    width: 250px;
-    margin: auto;
-    border-radius: 50%;
-    background-image: url(../images/duonos-tortas-duzges-sodyba.jpg);
-    background-position: center;
-    background-size: cover;
-    transition: .5s ease-in-out;
-    overflow: hidden;
-}
-.accommodation-img {
-    height: 250px;
-    width: 250px;
-    margin: auto;
-    border-radius: 50%;
-    background-image: url(../images/apgyvendinimas.jpg);
-    background-position: center;
-    background-size: cover;
-    transition: .5s ease-in-out;
-    overflow: hidden;
-}
-.bathtube-img {
-    height: 250px;
-    width: 250px;
-    margin: auto;
-    border-radius: 50%;
-    background-image: url(../images/kubilas-duzges-sodyba.jpg);
-    background-position: center;
-    background-size: cover;
-    transition: .5s ease-in-out;
-    overflow: hidden;   
 }
 .service-desc {
     text-align: justify;
@@ -323,6 +317,7 @@ a {
 .myImg {
     border-radius: 5px;
     transition: .5s ease-in-out;
+    height: 140px;
 }
 .sample-showcase {
     width: 60%;
@@ -374,32 +369,39 @@ background:#a67d3d;
 /* Paslaugos */
 .services-introduction-wrapper {
     height: 600px;
-    margin: 20px 0 20px 0;
+    margin: 0px 0 20px 0;
 }
 .services-bg {
     height: 100%;
     width: 100%;
     top:0;
-    background-image: url(../images/kiemelis-duzges-sodyba.jpg);
-    background-position: center;
+    background-image: url(../images/duzges-sodyba-lauko-stalai.jpg);
+    background-position: top;
     background-size: cover;
     border-radius: 20px;
 }
 .services-heading-wrapper {
-    bottom: 10px;
-    left: 10px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 20px;
-    padding: 20px;
-    background-color: rgba(233, 167, 62, 0.9);
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .services-heading-wrapper h2 {
-    font-size: 32px;
-    border-bottom: 1px solid black;
-    width: 150px;
+    font-size: 42px;
+    border-bottom: none;
+    color: #E9A73E;
+    text-shadow: 1px 1px #282828;
 }
-.services-heading-wrapper p {
-    font-size: 24px;
-    color: #5D5C61;
+.services-heading-wrapper h1 {
+    font-size: 42px;
 }
 .service-item-wrapper {
     top: 30px;
@@ -409,33 +411,21 @@ background:#a67d3d;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    display: none;
 }
 .service-item {
     height: 100px;
     width: 100px;
-    background-color: white;
-    background-color: rgba(233, 167, 62, 0.9);
-    border-radius: 50%;
     transition: .5s ease-in-out;
+    cursor: pointer;
 }
 .service-item i {
     font-size: 30px;
-    color: black;
+    color: #E9A73E;
 }
 .services-banquet-wrapper {
     height: auto;
-    border-radius: 20px;
     margin: 20px 0 20px 0;
-    background-color: #f1f1f1;
-}
-.main-banquet {
-    height: 500px;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    display: none;
-}
-#big-banquet-section {
-    display: flex;
 }
 .main-banquet-description {
     width: 35%;
@@ -469,6 +459,7 @@ background:#a67d3d;
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 .tablink {
     display: flex;
@@ -492,8 +483,17 @@ background:#a67d3d;
     justify-content: space-between;
     margin-top: 30px;
     padding: 20px;
+    /* border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.contacts-top-bg {
+    height: 100%;
+    width: 100%;
+    top:0;
+    background-image: url(../images/duzges-sodyba-lauko-terasa.jpg);
+    background-position: center;
+    background-size: cover;
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .contacts-bg {
     width: 100%;
@@ -574,16 +574,21 @@ background:#a67d3d;
     font-size: 12px;
 }
 .form-message-wrapper textarea {
+    outline: none;   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     padding: 10px;
     border-radius: 20px;
     border: 1px solid black;
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.7);
 }
-.form-input {
-    border-radius: 20px;
-}
-.form-input input {
+.form-input input[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
     width: 220px;
     padding: 10px;
     border-radius: 20px;
@@ -594,7 +599,11 @@ background:#a67d3d;
     width: 50%;
     margin: 0 auto;
 }
-.submit-wrapper input {
+.submit-wrapper input[type=submit] {
+    outline: none;   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: 100%;
     padding: 5px;
     border-radius: 20px;
@@ -690,6 +699,26 @@ background:#a67d3d;
     padding: 5px;
     margin-left: 10px;
 }
+.to-top-arrow {
+    width: 100px;
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tooltip {
+    position: absolute;
+    visibility: hidden;
+    transform: translateY(30px);
+}
+.fa-arrow-alt-circle-up {
+    font-size: 30px;
+    transition: .2s ease-in;
+}
+#toIntro {
+    color: rgba(255, 255, 255, 0.8);  
+}
 /* Mobile friendly */
 .burger-wrapper {
     height: 20px;
@@ -760,12 +789,34 @@ background:#a67d3d;
     float: left;
     color: #E9A73E;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
     .nav {
         display: none;
     }
+    .top-wrapper {
+        height: 80px;
+    }
+    .top-wrapper-heading {
+        width: 50%;
+    }
+    .top-wrapper-heading h1 {
+        font-size: 18px;
+    }
+    .top-wrapper-heading h2 {
+        font-size: 18px;
+    }
     .logo-div {
-        width: 40%;
+        height: 80px;
+        width: 20%;
+    }
+    .main-logo-div {
+        height: 150px;
+    }
+    .main-logo-div img {
+        width: 60px;
+    }
+    .logo-div img {
+        width: 50px;
     }
     .burger-wrapper {
         display: flex;
@@ -774,6 +825,7 @@ background:#a67d3d;
         width: 90%;
         margin: auto;
         height: 400px;
+        margin-top: 20px;
     }
     .title h1 {
         width: 70%;
@@ -827,6 +879,7 @@ background:#a67d3d;
     }
     .myImg {
         width: 120px;
+        height: 90px;
     }
     .sample-showcase {
         width: 100%;
@@ -837,6 +890,7 @@ background:#a67d3d;
     }
     #modal-img {
         width: 300px;
+        height: 250px;
     }
     #sample-showcase-alt {
         width: 90%;
@@ -852,24 +906,10 @@ background:#a67d3d;
     /* Paslaugos mobile */
     .services-introduction-wrapper {
         height: 350px;
-    }
-    .services-heading-wrapper {
-        width: 250px;
-        padding: 10px;
+        margin-top: 20px;
     }
     .services-heading-wrapper h2 {
-        margin: 0;
-        font-size: 20px;
-        text-align: center;
-    }
-    .services-heading-wrapper p {
-        font-size: 16px;
-    }
-    .service-item-wrapper {
-        top: 10px;
-        right: 10px;
-        width: 250px;
-        height: 80px;
+        font-size: 32px;
     }
     .service-item {
         width: 60px;
@@ -897,37 +937,10 @@ background:#a67d3d;
     .tablink-wrapper {
         display: none;
     }
-    .mobile-tablink-wrapper {
-        width: 0px;
-        height: auto;
-        top: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        border-radius: 20px;
-        transition: .5s ease-in-out;
-    }
-    .mobile-tablink {
-        width: 120px;
-        margin: auto;
-        font-size: 14px;
-        background-color: transparent;
-        text-align: center;
-        color: #E9A73E;
-        padding: 10px;
-        margin-bottom: 10px;
-        display: none;
-    }
-    .mobile-tablink-active {
-        display: block;
-    }
-    .mobile-tablink-wrapper-active {
-        width: 250px;
-    }
     .main-banquet {
         height: auto;
         flex-direction: column;
+        display: block;
     }
     .main-banquet-description {
         width: 90%;
@@ -991,15 +1004,13 @@ background:#a67d3d;
 }
 @media only screen and (min-width: 550px) and (max-width: 768px) {
     #modal-img {
-        width: 500px;
+        width: 400px;
+        height: 300px;
     }   
 }
 @media only screen and (min-width: 769px) and (max-width: 1100px) {
     .nav {
         width: 70%;
-    }
-    .logo-div {
-        width: 30%;
     }
     .title h1 {
         font-size: 32px;
@@ -1029,9 +1040,6 @@ background:#a67d3d;
     .sample-showcase {
         width: 100%;
     }
-    .mobile-tablink-wrapper {
-        display: none;
-    }
     .service-button {
         display: none;
     }
@@ -1043,7 +1051,7 @@ background:#a67d3d;
     }
     .main-banquet {
         height: auto;
-        flex-direction: column;
+        display: block;
     }
     .main-banquet-description {
         width: 90%;
@@ -1057,6 +1065,9 @@ background:#a67d3d;
     .main-banquet-img img {
         width: 90%;
         margin: auto;
+    }
+    .tablink-wrapper {
+        display: none;
     }
     #services-modal-wrapper {
         width: 90%;
@@ -1112,13 +1123,15 @@ background:#a67d3d;
     .footer-section h3 {
         border: none;
     }
+    .myImg {
+        width: 230px;
+        height: 160px;
+    }
 }
 @media only screen and (min-width: 1101px) and (max-width: 1250px) {
     #modal-img {
-        width: 550px;
-    }
-    .mobile-tablink-wrapper {
-        display: none;
+        width: 500px;
+        height: 400px;
     }
     .service-button {
         display: none;
@@ -1132,11 +1145,31 @@ background:#a67d3d;
     .form-message-wrapper {
         width: 90%;
     }
+    .tablink-wrapper {
+        display: none;
+    }
+    .main-banquet {
+        display: block;
+    }
+    .main-banquet-description {
+        width: 90%;
+        margin: auto;
+        padding: 20px; 
+    }
+    .main-banquet-description p {
+        font-size: 20px;
+        text-align: justify;
+        color: #5D5C61;
+    }
+    .main-banquet-description h2 {
+        text-align: center;
+    }
+    .main-banquet-img {
+        width: 75%;
+        margin: auto;
+    }
 }
 @media only screen and (min-width: 1251px) {
-    .logo-div img:hover {
-        width: 80px;
-    }
     .btn:hover, .myImg:hover {
         -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
@@ -1151,6 +1184,15 @@ background:#a67d3d;
     .fabyt:hover {
         color: #FF0000;
     }
+    .main-banquet {
+        height: 500px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        display: none;
+    }
+    #big-banquet-section {
+        display: flex;
+    }
     .service-item:hover {
         height: 120px;
         width: 120px;
@@ -1158,14 +1200,29 @@ background:#a67d3d;
     .tablink:hover {
         background: #f1f1f1;
     }
-    .mobile-tablink-wrapper {
-        display: none;
-    }
     .service-button {
         display: none;
     }
     .prev:hover, .next:hover {
         color: #282828;
         border: 1px solid #282828;
+    }
+    nav ul li a:hover {
+        color: #E9A73E;
+    }
+    .service-item-wrapper {
+        display: flex;
+    }
+    .to-top-arrow {
+        cursor: pointer;
+    }
+    .fa-arrow-alt-circle-up:hover {
+        color: rgba(255, 255, 255, 0.8); 
+    }
+    .fa-arrow-alt-circle-up:hover ~ .tooltip {
+        visibility: visible;
+    }
+    #toIntro {
+        cursor: pointer;
     }
 }

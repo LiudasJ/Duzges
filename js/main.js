@@ -42,10 +42,11 @@ const foodImg = document.getElementsByClassName('food-img');
 const accoImg = document.getElementsByClassName('accommodation-img');
 const bathtubeImg = document.getElementsByClassName('bathtube-img');
 
-var banquetImgList = ['images/auripictures-230.jpg', 'images/pokyliu-saliu-nuoma-duzges-sodyba-changed.jpg', 'images/apvaliu-stalu-nuoma-duzges-sodyba.jpg'];
-var foodImgList = ['images/duonos-tortas-duzges-sodyba.jpg', 'images/salti-patiekalai-duzges-sodyba.jpg', 'images/uzkandziai-duzges-sodyba.jpg'];
-var accoImgList = ['images/apgyvendinimas.jpg', 'images/apgyvendinimas-duzges-sodyba.jpg', 'images/apgyvendinimas-duzges-sodyba.jpg'];
-var bathtubeImgList = ['images/kubilas-duzges-sodyba.jpg', 'images/kubilo-nuoma-mazeikiuose.jpg', 'images/duzges-sodyba-kubilo-terasa.jpg'];
+const banquetImgList = ['images/auripictures-230.jpg', 'images/pokyliu-saliu-nuoma-duzges-sodyba.jpg', 'images/apvaliu-stalu-nuoma-duzges-sodyba.jpg'];
+const foodImgList = ['images/duonos-tortas-duzges-sodyba.jpg', 'images/salti-patiekalai-duzges-sodyba.jpg', 'images/uzkandziai-duzges-sodyba.jpg'];
+const accoImgList = ['images/apgyvendinimas.jpg', 'images/apgyvendinimas-duzges-sodyba.jpg', 'images/apgyvendinimas-duzges-sodyba.jpg'];
+const bathtubeImgList = ['images/kubilas-duzges-sodyba.jpg', 'images/kubilo-nuoma-mazeikiuose.jpg', 'images/duzges-sodyba-kubilo-terasa.jpg'];
+const starterImgPack = ['url(../images/auripictures-230.jpg)', 'url(../images/duonos-tortas-duzges-sodyba.jpg)', 'url(../images/apgyvendinimas.jpg)', 'url(../images/kubilas-duzges-sodyba.jpg)'];
 
 const banquetBubbleContainer = document.getElementsByClassName('banquet-bubbles-container');
 const foodBubbleContainer = document.getElementsByClassName('food-bubbles-container');
@@ -73,7 +74,7 @@ function createBubbles (imgList, container) {
 
 function restoreBubbleBgColor () {
     for (let i = 0; i < bubble.length; i++) {
-        bubble[i].style.backgroundColor = "#5D5C61";
+        bubble[i].style.backgroundColor = "#d3d3d3";
     }
 }
 
@@ -84,7 +85,7 @@ function changeServicesImg (img, imgList, number) {
         let actualcounter = counter;
         bubble[index].addEventListener('click', ()=>{
             restoreBubbleBgColor();
-            bubble[index].style.backgroundColor = "#d3d3d3";
+            bubble[index].style.backgroundColor = "#5D5C61";
             img.style.backgroundImage = `url(/${imgList[actualcounter]}`;
         })
         number++;
@@ -100,6 +101,9 @@ const serviceModalCloseBtn = document.getElementById('services-modal-closeBtn');
 const serviceModalImg = document.getElementById('service-modal-img');
 const aboutImg = document.getElementsByClassName('service-about-img');
 
+for (let i = 0; i < aboutImg.length; i++) {
+    aboutImg[i].style.backgroundImage = starterImgPack[i]
+}
 function openServiceModal () {
     serviceModal.classList.replace("scale-0", "scale-1"); 
 }

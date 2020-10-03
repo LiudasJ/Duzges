@@ -6,19 +6,22 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5db77d51c5.js" crossorigin="anonymous"></script>
-    <title>Dūzgės sodyba</title>
+    <title>Dūzgės sodyba - Paslaugos</title>
 </head>
 <body>
     <header class="header-wrapper">
         <div class="top-wrapper flex">
             <div class="logo-div flex-center">
-                <a href="../index.html"><img src="../images/logo.png" width="70px" alt="Duzges sodyba - pokylių salės nuoma Mažeikių rajone"></a>
+                <a href="../index.html"><img src="../images/logo.png" alt="Duzges sodyba - pokylių salės nuoma Mažeikių rajone"></a>
+            </div>
+            <div class="top-wrapper-heading">
+                <h1 class="main-color">Dūzgės sodyba</h1>
             </div>
             <nav class="nav relative">
                 <ul class="list-items flex">
-                    <li><a href="../index.html"><b>Apie mus</b></a></li>
-                    <li><a href="#"><b>Paslaugos</b></a></li>
-                    <li><a href="../kontaktai/index.html"><b>Kontaktai</b></a></li>
+                    <li><a href="../"><b>Apie mus</b></a></li>
+                    <li><a href="/paslaugos/"><b>Paslaugos</b></a></li>
+                    <li><a href="../kontaktai/"><b>Kontaktai</b></a></li>
                 </ul>
             </nav>
         </div>
@@ -29,9 +32,9 @@
         </div>
         <div class="mobile-nav-wrapper absolute">
             <ul class="mobile-nav-ul">
-                <li><i class="fas fa-home"></i><a href="../index.html">Pagrindinis</a></li>
+                <li><i class="fas fa-home"></i><a href="../">Pagrindinis</a></li>
                 <li><i class="fas fa-info-circle"></i><a href="#">Paslaugos</a></li>
-                <li><i class="fas fa-street-view"></i><a href="../kontaktai/index.html">Kontaktai</a></li>
+                <li><i class="fas fa-street-view"></i><a href="../kontaktai/">Kontaktai</a></li>
             </ul>
             <h3 class="mobile-nav-heading text-align-center main-color">Dūzgės sodyba</h3>
         </div>
@@ -40,8 +43,7 @@
         <div class="services-introduction-wrapper relative">
             <div class="services-bg"></div>
             <div class="services-heading-wrapper absolute">
-                <h2 class="heading-bottom-border">Paslaugos</h2>
-                <p>Šiame puslapyje rasite Dūzgės sodyboje teikiamas paslaugas</p>
+                <h2>Paslaugos</h2>
             </div>
             <div class="service-item-wrapper absolute">
                 <div class="banquet-service service-item flex-center">
@@ -56,27 +58,27 @@
             </div>
         </div>
         <div class="tablink-wrapper">
-            <span class="tablink active-tablink">Didžioji salė</span>
-            <span class="tablink">Mažoji salė</span>
-            <span class="tablink">Apgyvendinimas</span>
-            <span class="tablink">Maisto ruošimas</span>
-            <span class="tablink">Maisto išvežimas</span>
-            <span class="tablink">Kubilo nuoma</span>
+            <div class="tablink active-tablink">Didžioji salė</div>
+            <div class="tablink">Mažoji salė</div>
+            <div class="tablink">Apgyvendinimas</div>
+            <div class="tablink">Maisto ruošimas</div>
+            <div class="tablink">Maisto išvežimas</div>
+            <div class="tablink">Kubilo nuoma</div>
          </div>
         <article class="services-banquet-wrapper relative">
-            <div class="main-banquet flex" id="big-banquet-section">
+            <div class="main-banquet active" id="big-banquet-section">
                 <div class="main-banquet-description">
                     <h2 class="heading-bottom-border">Didžioji pokylių salė</h2>
                     <p>Didžioji pokylių salė talpina iki 60 svečių, o furšetų metu galime priimti net 80 svečių. Jums tikrai užteks vietos ne tik prie vaišių stalo, 
                         bet šokiams ir žaidimams taip pat. Pokylių salės interjerą puošia židiniai, klinkerio dekoras, autoriniai tautodailininkų darbai. 
-                        Iš pagindinės pokylių salės išėjus į terasą atsiveria puikus vaizdas į upę. Salėje oras kondicionuojamas, įrengtas grindinis šildymas, 
+                        Iš pagrindinės pokylių salės išėjus į terasą atsiveria puikus vaizdas į upę. Salėje oras kondicionuojamas, įrengtas grindinis šildymas, 
                         tad bet kokiu metų laiku patalpoje bus pageidaujama oro temperatūra. </p>
                 </div>
                 <div class="main-banquet-img flex-center">
                     <img src="../images/pokyliu-saliu-nuoma-duzges-sodyba.jpg" width="600px">
                 </div>
             </div>
-            <div class="main-banquet flex">
+            <div class="main-banquet">
                 <div class="main-banquet-description">
                     <h2 class="heading-bottom-border">Mažoji pokylių salė</h2>
                     <p>Mažoji pokylių salė talpina iki 30 svečių. Ji pritaikyta ne tik šventei, bet ir seminarų ar mokymų organizavimui. Iš mažosios pokylių salės yra išėjimas 
@@ -86,7 +88,7 @@
                     <img src="../images/mazoji-sale.jpg" width="600px">
                 </div>
             </div>
-            <div class="main-banquet flex">
+            <div class="main-banquet">
                 <div class="main-banquet-description">
                     <h2 class="heading-bottom-border">Apgyvendinimas</h2>
                     <p>Antrajame pastato aukšte įrengti dviviečiai, triviečiai ir keturviečiai kambariai, pro kurių langus atsiveria vaizdas į Varduvos upę. 
@@ -98,7 +100,7 @@
                     <img src="../images/apgyvendinimas.jpg" width="600px">
                 </div>
             </div>
-            <div class="main-banquet flex">
+            <div class="main-banquet">
                 <div class="main-banquet-description">
                     <h2 class="heading-bottom-border">Maisto ruošimas</h2>
                     <p>Mes turime sukaupę asmeninę patirtį ruošiant maistą ne tik pobūviams bet ir kitoms progoms.
@@ -137,8 +139,8 @@
             <div class="footer-nav footer-section">
                 <h3>Siūlome paskaityti:</h3>
                 <ul>
-                    <li><a href="../index.html#intro">Apie mus</a></li>
-                    <li><a href="../kontaktai/index.html">Kontaktai</a></li>
+                    <li><a href="../#intro">Apie mus</a></li>
+                    <li><a href="../kontaktai/">Kontaktai</a></li>
                 </ul>
             </div>
             <div class="footer-working-hours footer-section">
@@ -159,8 +161,9 @@
                 <a class="footer-info-text" href="https://www.facebook.com/duzgessodyba/" target="_blank"><span><i class="fab fa-facebook"></i></span></a>
             </div>
         </div>
+        <div class="to-top-arrow"><i class="far fa-arrow-alt-circle-up"></i><span class="tooltip">į viršų</span></div>
         <div class="copyrights">
-            <p>Dūzgės sodyba, 2020</p>
+            <span>Dūzgės sodyba, 2020</span>
         </div>
     </footer>
     <script src="../js/paslaugos.js"></script>

@@ -39,17 +39,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if (strlen($message) > 300) {
         $errors['longMessage'] = "Įvedėte per ilgą žinutę";
-    } else if (!preg_match_all("/^[a-zA-Z0-9 ]*$/", $message)) {
-        $errors['wrongMessage'] = "galimos tik raidės, skaičiai ir tarpeliai";
+    } else if (!preg_match_all("/\p{L}\p{M}*+/u", $message)) {
+        $errors['wrongMessage'] = "galimos tik raidės, skaičiai ir skiriamieji ženklai";
     }  
 }
 
 if (empty($errors)) {
 
     $servername = "localhost";
-    $username = "root";
+    $username = "";
     $password = "";
-    $dbname = "sodyba";
+    $dbname = "";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -62,16 +62,15 @@ if (empty($errors)) {
     $conn->exec($sql);
     $success['saved'] = "Žinutė sėkmingai išsiųsta! Susisieksime su Jumis kaip įmanoma greičiau.";
     echo json_encode($success);
+    $email_from = '';
+    $email_subject = "Nauja užklausa sodybos puslapyje";
+    $email_body = "Gavote naują žinutę nuo $name.\n" . "Žinutės tekstas:\n $message";
+    $to = "";
+    $headers .= "$name el.pašto adresas: $email \r\n";
+    $headers .= "$name telefono numeris: $tel \r\n";
+    mail($to,$email_subject,$email_body,$headers);
     $conn = null;
 
-    $email_from = 'info@duzgessodyba.com';
-    $email_subject = "Nauja užklausa sodybos puslapyje";
-    $email_body = "Gavote naują žinutę iš $name.\n" . "Žinutės tekstas:\n $message";
-    $to = "jonusas.liudas@gmail.com";
-    $headers = "Laiškas peradresuotas iš: $email_from \r\n";
-    $headers .= "Turite atrašyti į šį paštą: $email \r\n";
-    mail($to,$email_subject,$email_body,$headers);
-    
     } else {
         echo json_encode($errors);
     }

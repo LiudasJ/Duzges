@@ -6,19 +6,22 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5db77d51c5.js" crossorigin="anonymous"></script>
-    <title>Dūzgės sodyba | Kontaktai</title>
+    <title>Dūzgės sodyba - Kontaktai</title>
 </head>
 <body>
     <header class="header-wrapper">
         <div class="top-wrapper flex">
             <div class="logo-div flex-center">
-                <a href="../index.html"><img src="../images/logo.png" width="70px" alt="Duzges sodyba - pokylių salės nuoma Mažeikių rajone"></a>
+                <a href="../index.html"><img src="../images/logo.png" alt="Duzges sodyba - pokylių salės nuoma Mažeikių rajone"></a>
+            </div>
+            <div class="top-wrapper-heading">
+                <h1 class="main-color">Dūzgės sodyba</h1>
             </div>
             <nav class="nav relative">
                 <ul class="list-items flex">
-                    <li><a href="../index.html"><b>Apie mus</b></a></li>
-                    <li><a href="../paslaugos/index.html"><b>Paslaugos</b></a></li>
-                    <li><a href="#"><b>Kontaktai</b></a></li>
+                    <li><a href="../"><b>Apie mus</b></a></li>
+                    <li><a href="../paslaugos/"><b>Paslaugos</b></a></li>
+                    <li><a href="/kontaktai/"><b>Kontaktai</b></a></li>
                 </ul>
             </nav>
         </div>
@@ -37,7 +40,13 @@
         </div>
     </header>
     <main>
-        <h2 class="main-color text-align-center heading-bottom-border">Kontaktinė informacija</h2>
+        <div class="services-introduction-wrapper relative">
+            <div class="contacts-top-bg"></div>
+            <div class="services-heading-wrapper absolute">
+                <h2>Kontaktai</h2>
+            </div>
+        </div>
+        <!-- <h2 class="main-color text-align-center heading-bottom-border">Kontaktinė informacija</h2> -->
         <div class="contacts-container flex relative">
             <div class="contacts-bg flex-center">
                 <img src="../images/bee-1096917.png" alt="paveiksliukas bitė" width="400px">
@@ -58,7 +67,7 @@
                             <label><b>El.paštas*</b></label><span id="error-email" class="error"></span>
                         </div>
                         <div class="form-input">
-                            <input class="input-field" type="text" placeholder="Įveskite savo pavardę" name="email">
+                            <input class="input-field" type="text" placeholder="Įveskite savo el.paštą" name="email">
                         </div>
                     </div>
                 </div>
@@ -123,7 +132,7 @@
                 </div>
                 <div class="contacts-item flex">
                     <div class="contact-text">
-                        <p>Kiti būdai susisiekt su mumis:</p>
+                        <p>Kiti būdai susisiekti su mumis:</p>
                         <div class="social">
                             <a href="https://www.facebook.com/duzgessodyba/" target="_blank"><span><i class="fab fa-facebook"></i></span></a>
                         </div>
@@ -145,8 +154,8 @@
             <div class="footer-nav footer-section">
                 <h3>Siūlome paskaityti:</h3>
                 <ul>
-                    <li><a href="../index.html">Apie mus</a></li>
-                    <li><a href="../paslaugos/index.html">Paslaugos</a></li>
+                    <li><a href="../">Apie mus</a></li>
+                    <li><a href="../paslaugos/">Paslaugos</a></li>
                 </ul>
             </div>
             <div class="footer-working-hours footer-section">
@@ -167,8 +176,9 @@
                 <a class="footer-info-text" href="https://www.facebook.com/duzgessodyba/" target="_blank"><span><i class="fab fa-facebook"></i></span></a>
             </div>
         </div>
+        <div class="to-top-arrow"><i class="far fa-arrow-alt-circle-up"></i><span class="tooltip">į viršų</span></div>
         <div class="copyrights">
-            <p>Dūzgės sodyba, 2020</p>
+            <span>Dūzgės sodyba, 2020</span>
         </div>
     </footer>
     <script src="../js/kontaktai.js"></script>
